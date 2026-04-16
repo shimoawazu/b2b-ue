@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="의료기기 GD&amp;amp;T의 불확도 예산: 실무 가이드"
+      jcr:description="FDA 규제 의료기기 제조에서 방어 가능한 GD&amp;amp;T 측정 불확도 예산을 구축하기 위한 종합 가이드."
+      cq:lastModified="2026-02-27T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/white-paper]"
+      category="WHITE PAPER"
+      listOrder="2"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="뉴스"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="백서"
+             variant="white-paper"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="의료기기 GD&amp;amp;T의 불확도 예산: 실무 가이드"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;2026년 2월 27일 · 백서 · 읽기 시간: 8분&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;이 백서는 FDA 규제 의료기기 제조에서 가장 지속적인 과제 중 하나를 다룹니다. 바로 ISO 14253-1과 FDA 21 CFR Part 11 감사 요건을 모두 충족하는 기하 치수 및 공차(GD&amp;amp;T)를 위한 불확도 예산 구축입니다.&lt;/p&gt;&#xa;&lt;p&gt;Class II 및 Class III 기기 제조업체에서의 10년 이상의 배포 경험을 바탕으로, 당사 계측 팀은 측정 불확도의 모든 중요한 발생원을 식별, 정량화 및 문서화하기 위한 체계적인 단계별 방법론을 제시합니다. 여기에는 작업자 변동성과 고정구 적합성부터 환경 온도 기울기까지 모두 포함됩니다.&lt;/p&gt;&#xa;&lt;h2&gt;학습 내용&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;5개 범주 불확도 예산 프레임워크(Type A 및 Type B 발생원)&lt;/li&gt;&#xa;&lt;li&gt;표면 프로파일 및 진위치 호출에 대한 확장 불확도 U95 계산 방법&lt;/li&gt;&#xa;&lt;li&gt;CMM 기반 GD&amp;amp;T 측정 시스템을 위한 게이지 R&amp;amp;R 연구 설계&lt;/li&gt;&#xa;&lt;li&gt;ISO/IEC 17025 및 FDA 감사 요건에 부합하는 문서 템플릿&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h2&gt;백서 다운로드&lt;/h2&gt;&#xa;&lt;p&gt;당사 리소스 페이지의 양식을 작성하시면 Excel 형식의 작업 예제 및 편집 가능한 불확도 예산 템플릿이 포함된 전체 28페이지 백서를 받아보실 수 있습니다.&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/ko/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

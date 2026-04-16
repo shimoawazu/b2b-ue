@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Uncertainty Budgets in Medical Device GD&amp;T: A Practical Guide"
+      jcr:description="A comprehensive guide to building defensible uncertainty budgets for GD&amp;T measurement in FDA-regulated medical device manufacturing."
+      cq:lastModified="2026-02-27T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/white-paper]"
+      category="WHITE PAPER"
+      listOrder="2"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"/>
+      </section_breadcrumb>
+
+      <!-- Article Header -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="Uncertainty Budgets in Medical Device GD&amp;T: A Practical Guide"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;February 27, 2026 &amp;middot; White Paper &amp;middot; 8 min read&lt;/p&gt;"/>
+      </section>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;This white paper addresses one of the most persistent challenges in FDA-regulated medical device manufacturing: building uncertainty budgets for geometric dimensioning and tolerancing (GD&amp;amp;T) that satisfy both ISO 14253-1 and FDA 21 CFR Part 11 audit requirements.&lt;/p&gt;&#xa;&lt;p&gt;Drawing on over a decade of deployment experience across Class II and Class III device manufacturers, our metrology team presents a structured, step-by-step methodology for identifying, quantifying, and documenting all significant sources of measurement uncertainty — from operator variability and fixture compliance to environmental temperature gradients.&lt;/p&gt;&#xa;&lt;h2&gt;What You Will Learn&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;The five-category uncertainty budget framework (Type A and Type B sources)&lt;/li&gt;&#xa;&lt;li&gt;How to calculate the expanded uncertainty U95 for surface profile and true position callouts&lt;/li&gt;&#xa;&lt;li&gt;Gauge R&amp;amp;R study design for CMM-based GD&amp;amp;T measurement systems&lt;/li&gt;&#xa;&lt;li&gt;Documentation templates aligned with ISO/IEC 17025 and FDA audit expectations&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h2&gt;Download the White Paper&lt;/h2&gt;&#xa;&lt;p&gt;Complete the form on our resources page to receive the full 28-page white paper, including worked examples and editable uncertainty budget templates in Excel format.&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/en/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

@@ -1,0 +1,24 @@
+- generic [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - img "Logo" [ref=e7]
+      - heading "Sign in" [level=1] [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - generic [ref=e15]: Email
+            - textbox "Email" [active] [ref=e17]:
+              - /placeholder: Your email address
+          - button "Continue" [ref=e18] [cursor=pointer]:
+            - generic [ref=e19]: Continue
+        - generic [ref=e20]: OR
+        - link "Continue with Google" [ref=e23] [cursor=pointer]:
+          - /url: api/login?provider=GoogleOAuth&state=%7B%22redirectAfterSuccessUrl%22%3A%22https%3A%2F%2Fapp.paper.design%2Ffile%2F01KN3DRP0W09MM4WH9JCTBJ9CA%3Fnode%3DE4-0%22%7D&redirect_uri=https%3A%2F%2Fapi.paper.design%2Fauth%2Fcallback&client_id=client_01JFDMX4SFDGNY1NN3RRQ4A7Z3&source=signin&authorization_session_id=01KN7B8Q1ZV3T5R7FS4408VZ1F
+          - img [ref=e24]
+          - generic [ref=e30]: Continue with Google
+      - paragraph [ref=e31]:
+        - text: Don't have an account?
+        - link "Sign up" [ref=e32] [cursor=pointer]:
+          - /url: /sign-up?state=%7B%22redirectAfterSuccessUrl%22%3A%22https%3A%2F%2Fapp.paper.design%2Ffile%2F01KN3DRP0W09MM4WH9JCTBJ9CA%3Fnode%3DE4-0%22%7D&redirect_uri=https%3A%2F%2Fapi.paper.design%2Fauth%2Fcallback&authorization_session_id=01KN7B8Q1ZV3T5R7FS4408VZ1F
+  - alert [ref=e33]

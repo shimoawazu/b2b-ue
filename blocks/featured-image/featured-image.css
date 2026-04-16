@@ -1,0 +1,29 @@
+/* ── Container reset ──────────────────────────────────────────── */
+.featured-image-container .featured-image-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+/* ── Image ────────────────────────────────────────────────────── */
+.featured-image picture,
+.featured-image img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 420px;
+}
+
+/* ── Placeholder (no image set) ───────────────────────────────── */
+.featured-image-placeholder {
+  height: 360px;
+  background: linear-gradient(135deg, #001428 0%, #003087 60%, #0055aa 100%);
+  border-radius: 8px;
+}
+
+/* ── Mobile ───────────────────────────────────────────────────── */
+@media (width < 768px) {
+  .featured-image-placeholder {
+    height: 220px;
+  }
+}

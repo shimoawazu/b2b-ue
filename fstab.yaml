@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: "https://author-p161901-e1740392.adobeaemcloud.com/bin/franklin.delivery/SatoshiInoue/b2b-ue/main"
+    type: "markup"
+    suffix: ".html"

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Presupuestos de incertidumbre en GD&amp;amp;T para dispositivos médicos: una guía práctica"
+      jcr:description="Una guía completa para construir presupuestos de incertidumbre defendibles para medición GD&amp;amp;T en fabricación de dispositivos médicos regulados por la FDA."
+      cq:lastModified="2026-02-27T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/white-paper]"
+      category="WHITE PAPER"
+      listOrder="2"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="Noticias"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="Libro blanco"
+             variant="white-paper"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="Presupuestos de incertidumbre en GD&amp;amp;T para dispositivos médicos: una guía práctica"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;27 de febrero de 2026 · Libro blanco · 8 min de lectura&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Este libro blanco aborda uno de los desafíos más persistentes en la fabricación de dispositivos médicos regulados por la FDA: la construcción de presupuestos de incertidumbre para la dimensión geométrica y tolerancias (GD&amp;amp;T) que satisfagan tanto los requisitos de auditoría de la ISO 14253-1 como los del FDA 21 CFR Parte 11.&lt;/p&gt;&#xa;&lt;p&gt;Basándose en más de una década de experiencia de implementación en fabricantes de dispositivos Clase II y Clase III, nuestro equipo de metrología presenta una metodología estructurada, paso a paso, para identificar, cuantificar y documentar todas las fuentes significativas de incertidumbre de medición — desde la variabilidad del operador y el cumplimiento de los utillajes hasta los gradientes de temperatura ambiental.&lt;/p&gt;&#xa;&lt;h2&gt;Lo que aprenderá&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;El marco de presupuesto de incertidumbre de cinco categorías (fuentes Tipo A y Tipo B)&lt;/li&gt;&#xa;&lt;li&gt;Cómo calcular la incertidumbre expandida U95 para perfiles de superficie y llamadas de posición verdadera&lt;/li&gt;&#xa;&lt;li&gt;Diseño de estudios Gauge R&amp;amp;R para sistemas de medición GD&amp;amp;T basados en CMM&lt;/li&gt;&#xa;&lt;li&gt;Plantillas de documentación alineadas con ISO/IEC 17025 y las expectativas de auditoría de la FDA&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h2&gt;Descargue el libro blanco&lt;/h2&gt;&#xa;&lt;p&gt;Complete el formulario en nuestra página de recursos para recibir el libro blanco completo de 28 páginas, que incluye ejemplos resueltos y plantillas de presupuesto de incertidumbre editables en formato Excel.&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/es/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

@@ -1,0 +1,111 @@
+/* ── Dark spec table (default — matches Paper node 1IF-0) ──
+   Stacked vertical layout: muted label on top, bold white value below.
+   Near-black background, thin white divider between rows. */
+.content-fragment-spec.dark {
+  background: #0c1118;
+  padding: 48px 0;
+}
+
+.content-fragment-spec.dark .content-fragment-product-name {
+  color: #e8b400;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 0 12px;
+}
+
+.content-fragment-spec.dark .content-fragment-row {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255 255 255 / 0.09);
+}
+
+.content-fragment-spec.dark .content-fragment-row:last-child {
+  border-bottom: none;
+}
+
+.content-fragment-spec.dark .content-fragment-label {
+  display: block;
+  color: rgba(255 255 255 / 0.48);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.content-fragment-spec.dark .content-fragment-value {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ── Light spec table ── */
+.content-fragment-spec.light {
+  background: #fff;
+  padding: 48px 0;
+}
+
+.content-fragment-spec.light .content-fragment-product-name {
+  color: #e8b400;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 0 12px;
+}
+
+.content-fragment-spec.light .content-fragment-row {
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.content-fragment-spec.light .content-fragment-row:last-child {
+  border-bottom: none;
+}
+
+.content-fragment-spec.light .content-fragment-label {
+  display: block;
+  color: #4a5568;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.content-fragment-spec.light .content-fragment-value {
+  display: block;
+  color: #001428;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ── States ── */
+.content-fragment-placeholder,
+.content-fragment-loading {
+  color: #999;
+  font-size: 14px;
+  padding: 24px 0;
+}
+
+.content-fragment-error {
+  color: #c00;
+  font-size: 14px;
+  padding: 24px 0;
+}
+
+.content-fragment-debug {
+  font-size: 12px;
+  overflow: auto;
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .content-fragment-spec {
+    padding: 32px 0;
+  }
+
+  .content-fragment-spec .content-fragment-row {
+    padding: 16px 0;
+  }
+}

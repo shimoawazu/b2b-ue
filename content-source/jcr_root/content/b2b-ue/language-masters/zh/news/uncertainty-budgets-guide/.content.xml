@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="医疗器械GD&amp;amp;T中的不确定度预算：实践指南"
+      jcr:description="关于在FDA监管医疗器械制造中构建可靠GD&amp;amp;T测量不确定度预算的综合指南。"
+      cq:lastModified="2026-02-27T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/white-paper]"
+      category="WHITE PAPER"
+      listOrder="2"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="新闻"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="白皮书"
+             variant="white-paper"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="医疗器械GD&amp;amp;T中的不确定度预算：实践指南"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;2026年2月27日 · 白皮书 · 阅读时间：8分钟&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;本白皮书针对FDA监管下医疗器械制造中最为棘手的挑战之一：构建同时满足ISO 14253-1和FDA 21 CFR第11部分审计要求的几何尺寸与公差（GD&amp;amp;T）不确定度预算。&lt;/p&gt;&#xa;&lt;p&gt;基于在II类和III类医疗器械制造商中逾十年的部署经验，我们的计量团队提出了一套系统化的逐步方法，用于识别、量化和记录所有重要的测量不确定度来源——从操作员变异性和夹具合规性，到环境温度梯度。&lt;/p&gt;&#xa;&lt;h2&gt;您将学到的内容&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;五类不确定度预算框架（A类和B类来源）&lt;/li&gt;&#xa;&lt;li&gt;如何计算表面轮廓度和真实位置标注的扩展不确定度U95&lt;/li&gt;&#xa;&lt;li&gt;基于CMM的GD&amp;amp;T测量系统的量具R&amp;amp;R研究设计&lt;/li&gt;&#xa;&lt;li&gt;符合ISO/IEC 17025及FDA审计要求的文档模板&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h2&gt;下载白皮书&lt;/h2&gt;&#xa;&lt;p&gt;请填写我们资源页面上的表单，即可获取完整的28页白皮书，其中包含详细计算示例及Excel格式的可编辑不确定度预算模板。&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/zh/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

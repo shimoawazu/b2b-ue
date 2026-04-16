@@ -1,0 +1,635 @@
+/* ── Shared base ────────────────────────────────────────── */
+
+.list .list-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list .list-item > a {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list .list-item-image {
+  display: block;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.list .list-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list .list-item-image-placeholder {
+  background-color: var(--color-gray-light, #e8e8e8);
+}
+
+.list .list-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.list .list-item-body h3 {
+  margin: 0;
+  line-height: 1.3;
+  color: var(--link-color, #035fe6);
+}
+
+.list .list-item:hover .list-item-body h3 {
+  text-decoration: underline;
+}
+
+.list .list-item-description {
+  margin: 0;
+  color: var(--text-color, #333);
+  line-height: 1.5;
+}
+
+.list .list-item-date {
+  margin: 0;
+  margin-top: auto;
+  color: var(--color-gray-dark, #666);
+}
+
+/* ── Card style (default) ───────────────────────────────── */
+
+.list.list-style-card .list-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .list.list-style-card .list-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .list.list-style-card .list-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.list.list-style-card .list-item {
+  border: 1px solid var(--color-gray, #e0e0e0);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.list.list-style-card .list-item:hover {
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+}
+
+.list.list-style-card .list-item > a {
+  flex-direction: column;
+  height: 100%;
+}
+
+.list.list-style-card .list-item-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.list.list-style-card .list-item-body {
+  padding: 1rem;
+  flex: 1;
+}
+
+.list.list-style-card .list-item-body h3 {
+  font-size: var(--heading-font-size-s, 1.1rem);
+}
+
+.list.list-style-card .list-item-description {
+  font-size: var(--body-font-size-s, 0.9rem);
+}
+
+.list.list-style-card .list-item-date {
+  font-size: var(--body-font-size-xs, 0.8rem);
+}
+
+/* ── Small style ────────────────────────────────────────── */
+
+.list.list-style-small .list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.list.list-style-small .list-item {
+  border-bottom: 1px solid var(--color-gray, #e0e0e0);
+}
+
+.list.list-style-small .list-item:first-child {
+  border-top: 1px solid var(--color-gray, #e0e0e0);
+}
+
+.list.list-style-small .list-item > a {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+}
+
+.list.list-style-small .list-item-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2px;
+}
+
+.list.list-style-small .list-item-body {
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.list.list-style-small .list-item-body h3 {
+  font-size: var(--body-font-size-m, 1rem);
+}
+
+.list.list-style-small .list-item-description {
+  font-size: var(--body-font-size-xs, 0.8rem);
+}
+
+.list.list-style-small .list-item-date {
+  font-size: var(--body-font-size-xs, 0.8rem);
+}
+
+/* ── Medium style ───────────────────────────────────────── */
+
+.list.list-style-medium .list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list.list-style-medium .list-item {
+  border: 1px solid var(--color-gray, #e0e0e0);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.list.list-style-medium .list-item:hover {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+.list.list-style-medium .list-item > a {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.list.list-style-medium .list-item-image {
+  width: 10rem;
+  aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 600px) {
+  .list.list-style-medium .list-item-image {
+    width: 12rem;
+  }
+}
+
+.list.list-style-medium .list-item-body {
+  padding: 0.875rem 1rem;
+  flex: 1;
+}
+
+.list.list-style-medium .list-item > a::after {
+  align-self: center;
+}
+
+.list.list-style-medium .list-item-body h3 {
+  font-size: var(--heading-font-size-s, 1.1rem);
+}
+
+.list.list-style-medium .list-item-description {
+  font-size: var(--body-font-size-s, 0.9rem);
+}
+
+.list.list-style-medium .list-item-date {
+  font-size: var(--body-font-size-xs, 0.8rem);
+}
+
+.list .list-empty {
+  color: var(--color-gray-dark, #666);
+  font-style: italic;
+}
+
+.list .list-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-gray, #e0e0e0);
+}
+
+.list .list-pagination-btn {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--color-gray, #e0e0e0);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--body-font-size-s, 0.9rem);
+  color: var(--link-color, #035fe6);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.list .list-pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.list .list-pagination-btn:hover:not(:disabled) {
+  background: var(--link-color, #035fe6);
+  color: #fff;
+}
+
+.list .list-pagination-info {
+  font-size: var(--body-font-size-s, 0.9rem);
+  color: var(--color-gray-dark, #666);
+  min-width: 6rem;
+  text-align: center;
+}
+
+
+/* ============================================================
+   News Featured — 3-card editorial grid
+   First card is featured (larger); secondary cards are smaller.
+   Mobile: featured stays vertical; secondary go horizontal.
+   ============================================================ */
+
+.list.list-style-news-featured {
+  padding: 0 64px 80px;
+}
+
+.list.list-style-news-featured .list-news-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ── Card base ──────────────────────────────────────────────── */
+.list-news-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8ecf5;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.list-news-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 48, 135, 0.1);
+}
+
+.list-news-featured {
+  flex: 2;
+}
+
+.list-news-item > a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-news-item > a::after {
+  content: none;
+}
+
+/* ── Image area ─────────────────────────────────────────────── */
+.list-news-image {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #001840 0%, #003087 60%, #0055aa 100%);
+  height: 170px;
+}
+
+.list-news-featured .list-news-image {
+  height: 240px;
+}
+
+.list-news-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.list-news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.list-news-image .list-item-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #001840 0%, #003087 60%, #0055aa 100%);
+}
+
+/* ── Category badge ─────────────────────────────────────────── */
+.list-news-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  padding: 4px 10px;
+  z-index: 1;
+  /* default */
+  background: #4a5568;
+  color: #fff;
+}
+
+.list-news-badge[data-category="product-launch"] {
+  background: #003087;
+  color: #e8b400;
+}
+
+.list-news-badge[data-category="white-paper"] {
+  background: #0066cc;
+  color: #fff;
+}
+
+.list-news-badge[data-category="company"] {
+  background: #1a7a3c;
+  color: #fff;
+}
+
+.list-news-badge[data-category="event"] {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.list-news-badge[data-category="press-release"] {
+  background: #0f766e;
+  color: #fff;
+}
+
+/* ── Body ───────────────────────────────────────────────────── */
+.list-news-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+}
+
+.list-news-featured .list-news-body {
+  padding: 28px;
+}
+
+.list-news-date {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  color: #8a97a8;
+  letter-spacing: 0.04em;
+}
+
+.list-news-date time {
+  font: inherit;
+}
+
+.list-news-title {
+  margin: 0;
+  font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #003087;
+}
+
+.list-news-featured .list-news-title {
+  font-size: 20px;
+}
+
+.list-news-description {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.list-news-featured .list-news-description {
+  font-size: 14px;
+}
+
+.list-news-readmore {
+  margin: auto 0 0;
+  padding-top: 12px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0066cc;
+}
+
+.list-news-featured .list-news-readmore {
+  padding-top: 16px;
+}
+
+.list-news-item:hover .list-news-title {
+  text-decoration: underline;
+}
+
+/* ── Tablet ─────────────────────────────────────────────────── */
+@media (width < 1024px) {
+  .list.list-style-news-featured {
+    padding: 0 32px 48px;
+  }
+}
+
+/* ── Mobile ─────────────────────────────────────────────────── */
+@media (width < 600px) {
+  .list.list-style-news-featured {
+    padding: 0 20px 40px;
+  }
+
+  .list.list-style-news-featured .list-news-grid {
+    flex-direction: column;
+  }
+
+  .list-news-featured {
+    flex: unset;
+  }
+
+  .list-news-featured .list-news-image {
+    height: 160px;
+  }
+
+  /* Secondary cards: horizontal thumbnail-left layout */
+  .list-news-item:not(.list-news-featured) {
+    flex-direction: row;
+    height: 100px;
+  }
+
+  .list-news-item:not(.list-news-featured) > a {
+    flex-direction: row;
+  }
+
+  .list-news-item:not(.list-news-featured) .list-news-image {
+    width: 90px;
+    height: 100%;
+    flex-shrink: 0;
+  }
+
+  .list-news-item:not(.list-news-featured) .list-news-body {
+    padding: 14px 16px;
+    gap: 4px;
+    justify-content: center;
+  }
+
+  /* Hide description on secondary mobile cards */
+  .list-news-item:not(.list-news-featured) .list-news-description {
+    display: none;
+  }
+
+  .list-news-item:not(.list-news-featured) .list-news-title {
+    font-size: 12.5px;
+  }
+
+  .list-news-item:not(.list-news-featured) .list-news-date {
+    font-size: 9.5px;
+  }
+
+  .list-news-item:not(.list-news-featured) .list-news-readmore {
+    font-size: 11px;
+    padding-top: 4px;
+  }
+
+  .list-news-item:not(.list-news-featured) .list-news-badge {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+}
+
+
+/* ============================================================
+   Footer Nav style
+   Rendered inside the footer's nav section as a column.
+   ============================================================ */
+
+.list.list-style-footer-nav {
+  padding: 0;
+  background: none;
+}
+
+.list.list-style-footer-nav .footer-nav-heading {
+  color: #e8b400;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e8b400;
+  display: inline-block;
+}
+
+.list.list-style-footer-nav .footer-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list.list-style-footer-nav .footer-nav-links li {
+  margin-bottom: 10px;
+}
+
+.list.list-style-footer-nav .footer-nav-links a {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.list.list-style-footer-nav .footer-nav-links a:hover {
+  color: #fff;
+}
+
+.list.list-style-footer-nav .footer-nav-links a::after {
+  content: none !important;
+}
+
+/* ── Related style ──────────────────────────────────────────── */
+.list.list-style-related .list-related-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list.list-style-related .list-related-item > a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f4f9;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.list.list-style-related .list-related-item:last-child > a {
+  border-bottom: none;
+}
+
+.list.list-style-related .list-related-item > a:hover .list-related-title {
+  text-decoration: underline;
+}
+
+.list.list-style-related .list-related-category {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #e8b400;
+  white-space: nowrap;
+}
+
+.list.list-style-related .list-related-title {
+  margin: 0;
+  font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #003087;
+}
+
+.list.list-style-related .list-related-date {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  color: #8a97a8;
+  white-space: nowrap;
+}
+
+/* Suppress global link arrow */
+.list.list-style-related .list-related-item > a::after,
+.list.list-style-related .list-related-item > a:hover::after {
+  content: none !important;
+}
+
+/* ── RTL (Arabic) overrides ─────────────────────────────────── */
+[dir="rtl"] .list-news-badge {
+  left: auto;
+  right: 16px;
+}

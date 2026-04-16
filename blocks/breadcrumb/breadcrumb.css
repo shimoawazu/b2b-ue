@@ -1,0 +1,123 @@
+/* ── Container reset ──────────────────────────────────────────── */
+.breadcrumb-container .breadcrumb-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+/* ── Block ────────────────────────────────────────────────────── */
+.breadcrumb {
+  padding: 20px 64px;
+  border-bottom: 1px solid #e8ecf5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Breadcrumb trail ─────────────────────────────────────────── */
+.breadcrumb nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.breadcrumb nav ol li {
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  color: #8a97a8;
+}
+
+/* › separator injected via CSS — no DOM node needed */
+.breadcrumb nav ol li + li::before {
+  content: '›';
+  margin: 0 6px;
+  color: #c4cdd8;
+  font-weight: 400;
+}
+
+.breadcrumb nav ol li a {
+  color: #8a97a8;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.breadcrumb nav ol li a:hover {
+  color: #003087;
+  text-decoration: underline;
+}
+
+/* Suppress global link arrow pseudo-element */
+.breadcrumb nav ol li a::after,
+.breadcrumb nav ol li a:hover::after {
+  content: none !important;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Current page crumb */
+.breadcrumb nav ol li span[aria-current="page"] {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* ── Category badge ───────────────────────────────────────────── */
+.breadcrumb-badge {
+  display: inline-block;
+  font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  background: #4a5568;
+  color: #fff;
+  align-self: flex-start;
+}
+
+.breadcrumb-badge--product-launch {
+  background: #003087;
+  color: #e8b400;
+}
+
+.breadcrumb-badge--white-paper {
+  background: #0066cc;
+  color: #fff;
+}
+
+.breadcrumb-badge--company {
+  background: #1a3a5c;
+  color: #fff;
+}
+
+.breadcrumb-badge--industry-insight {
+  background: #005c2e;
+  color: #fff;
+}
+
+.breadcrumb-badge--technical-note {
+  background: #0055aa;
+  color: #fff;
+}
+
+/* ── RTL ──────────────────────────────────────────────────────── */
+[dir="rtl"] .breadcrumb {
+  padding: 20px 64px;
+}
+
+[dir="rtl"] .breadcrumb-badge {
+  align-self: flex-start;
+}
+
+/* ── Mobile ───────────────────────────────────────────────────── */
+@media (width < 768px) {
+  .breadcrumb {
+    padding: 16px 20px;
+  }
+}

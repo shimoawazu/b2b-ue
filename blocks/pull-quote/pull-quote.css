@@ -1,0 +1,52 @@
+/* ── Container reset ──────────────────────────────────────────── */
+.pull-quote-container .pull-quote-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+/* ── Block ────────────────────────────────────────────────────── */
+.pull-quote {
+  margin: 0 64px;
+  padding: 6px 0 6px 24px;
+  border-left: 4px solid #e8b400;
+  max-width: 720px;
+}
+
+/* ── Quote text ───────────────────────────────────────────────── */
+.pull-quote .pull-quote-text {
+  margin: 0;
+  font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.5;
+  color: #003087;
+}
+
+.pull-quote .pull-quote-text p {
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+}
+
+/* ── RTL ──────────────────────────────────────────────────────── */
+[dir="rtl"] .pull-quote {
+  padding: 6px 24px 6px 0;
+  border-left: none;
+  border-right: 4px solid #e8b400;
+}
+
+/* ── Mobile ───────────────────────────────────────────────────── */
+@media (width < 768px) {
+  .pull-quote {
+    margin: 0 20px;
+  }
+
+  .pull-quote .pull-quote-text {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="name">b2b-ue-site-template</entry>
+  <entry key="version">1.0.0</entry>
+  <entry key="group">b2b-ue</entry>
+  <entry key="description">B2B UE Site Template for AEM EDS + Universal Editor (Lumina Noventis)</entry>
+  <entry key="requiresRoot">false</entry>
+  <entry key="packageType">content</entry>
+</properties>

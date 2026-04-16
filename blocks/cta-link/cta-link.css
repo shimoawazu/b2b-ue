@@ -1,0 +1,83 @@
+.cta-link-container .cta-link-wrapper {
+  text-align: center;
+  padding: 16px 24px 56px;
+}
+
+.cta-link-inner {
+  display: inline-block;
+}
+
+.cta-link-anchor {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #003087;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #e8b400;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.cta-link-anchor:hover {
+  color: #0066cc;
+  border-color: #0066cc;
+}
+
+.cta-link-arrow {
+  transition: transform 0.2s;
+}
+
+.cta-link-anchor:hover .cta-link-arrow {
+  transform: translateX(3px);
+}
+
+/* nav-tools context: suppress block wrapper margins */
+.nav-tools .cta-link-wrapper,
+.nav-tools .cta-link-container {
+  display: contents;
+}
+
+/* Search icon button */
+.cta-link-search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.cta-link-search:hover {
+  color: #fff;
+}
+
+/* Contact CTA button */
+.cta-link-contact {
+  display: inline-block;
+  background: #e8b400;
+  color: #001840 !important;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 2px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.cta-link-contact:hover {
+  background: #d4a200;
+}
+
+.cta-link-contact::after {
+  content: none !important;
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      hideInNav="{Boolean}true"
+      jcr:title="Footer"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Section 1: Brand -->
+      <section_brand jcr:primaryType="nt:unstructured"
+                     sling:resourceType="core/franklin/components/section/v1/section">
+        <image jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/image/v1/image"
+               image="/content/dam/b2b-ue/images/lumina-noventis-logo.png"
+               imageAlt="Lumina Noventis"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;フォトニクス · イメージング · インテリジェンス&lt;/p&gt;
+&lt;p&gt;世界中の重要な産業用途および科学用途向けの精密測定機器。&lt;/p&gt;"/>
+        <social_icons jcr:primaryType="nt:unstructured"
+                      sling:resourceType="core/franklin/components/block/v1/block"
+                      name="Social Icons"
+                      model="social-icons"
+                      linkedinUrl="https://www.linkedin.com/company/lumina-noventis"
+                      twitterUrl="https://twitter.com/luminanoventis"
+                      youtubeUrl="https://www.youtube.com/c/luminanoventis"/>
+      </section_brand>
+
+      <!-- Section 2: Nav columns -->
+      <section_nav jcr:primaryType="nt:unstructured"
+                   sling:resourceType="core/franklin/components/section/v1/section">
+        <list_products jcr:primaryType="nt:unstructured"
+                       sling:resourceType="core/franklin/components/block/v1/block"
+                       name="List" model="list"
+                       heading="製品"
+                       rootPath="/ja/products"
+                       sortBy="listOrder"
+                       listStyle="footer-nav"/>
+        <list_solutions jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block"
+                        name="List" model="list"
+                        heading="ソリューション"
+                        rootPath="/ja/solutions"
+                        sortBy="listOrder"
+                        listStyle="footer-nav"/>
+        <list_support jcr:primaryType="nt:unstructured"
+                      sling:resourceType="core/franklin/components/block/v1/block"
+                      name="List" model="list"
+                      heading="サポート"
+                      rootPath="/ja/support"
+                      sortBy="listOrder"
+                      listStyle="footer-nav"/>
+        <list_company jcr:primaryType="nt:unstructured"
+                      sling:resourceType="core/franklin/components/block/v1/block"
+                      name="List" model="list"
+                      heading="企業情報"
+                      rootPath="/ja/company"
+                      sortBy="listOrder"
+                      listStyle="footer-nav"/>
+      </section_nav>
+
+      <!-- Section 3: Bottom bar -->
+      <section_bottom jcr:primaryType="nt:unstructured"
+                      sling:resourceType="core/franklin/components/section/v1/section">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;© 2026 Lumina Noventis GmbH. All rights reserved.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/ja/privacy-policy&quot;&gt;プライバシーポリシー&lt;/a&gt;&lt;a href=&quot;/ja/terms-of-use&quot;&gt;利用規約&lt;/a&gt;&lt;a href=&quot;/ja/cookie-settings&quot;&gt;Cookie設定&lt;/a&gt;&lt;a href=&quot;/ja/legal-notice&quot;&gt;法的通知&lt;/a&gt;&lt;/p&gt;"/>
+      </section_bottom>
+
+    </root>
+  </jcr:content>
+</jcr:root>

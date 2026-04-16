@@ -1,0 +1,57 @@
+{
+  "definitions": [
+    {
+      "title": "Social Icons",
+      "id": "social-icons",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Social Icons",
+              "model": "social-icons"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "social-icons",
+      "fields": [
+        {
+          "component": "text",
+          "name": "linkedinUrl",
+          "label": "LinkedIn URL",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "twitterUrl",
+          "label": "Twitter/X URL",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "youtubeUrl",
+          "label": "YouTube URL",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "instagramUrl",
+          "label": "Instagram URL",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "facebookUrl",
+          "label": "Facebook URL",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

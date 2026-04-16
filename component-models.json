@@ -1,0 +1,987 @@
+[
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "tab",
+        "label": "Basic",
+        "name": "tab-basic"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title",
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:pagetitle",
+        "label": "Page Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description"
+      },
+      {
+        "component": "tab",
+        "label": "Navigation",
+        "name": "tab-nav"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "navOrder",
+        "label": "Nav Order"
+      },
+      {
+        "component": "boolean",
+        "name": "hideInNav",
+        "label": "Hide in Nav"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "listOrder",
+        "label": "List Order"
+      },
+      {
+        "component": "tab",
+        "label": "Article",
+        "name": "tab-article"
+      },
+      {
+        "component": "reference",
+        "name": "featuredImage",
+        "label": "Featured Image",
+        "description": "Thumbnail shown in list cards (card, news-featured styles). Stored as a flat JCR property — no extra page fetch needed by the list block.",
+        "multi": false
+      },
+      {
+        "component": "aem-tag",
+        "name": "cq:tags",
+        "label": "Category Tag",
+        "description": "Select a news category tag. Sets the badge shown on list cards.",
+        "rootPath": "/content/cq:tags/b2b-ue/news-category"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "category",
+        "label": "Category (plain text)",
+        "description": "Display label for the category badge (e.g. PRODUCT LAUNCH). Used by the published query index."
+      }
+    ]
+  },
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "title",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Section Name",
+        "description": "The label shown for this section in the Content Tree"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          },
+          {
+            "name": "Feature Split",
+            "value": "feature-split"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "cardstyle",
+        "label": "Card Style",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Image Top",
+            "value": "image-top"
+          },
+          {
+            "name": "Image Bottom",
+            "value": "image-bottom"
+          },
+          {
+            "name": "Image Left",
+            "value": "image-left"
+          },
+          {
+            "name": "Image Right",
+            "value": "image-right"
+          },
+          {
+            "name": "Teaser Overlay",
+            "value": "teaser-overlay"
+          },
+          {
+            "name": "Solution Tile",
+            "value": "solution-tile"
+          },
+          {
+            "name": "Feature Tile",
+            "value": "feature-tile"
+          },
+          {
+            "name": "Product Card",
+            "value": "product-card"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "ctastyle",
+        "label": "CTA Style",
+        "valueType": "string",
+        "value": "button",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "button"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "button-secondary"
+          },
+          {
+            "name": "Dark Button",
+            "value": "button-dark"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "icon",
+        "label": "Icon",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "None",
+            "value": ""
+          },
+          {
+            "name": "Hexagon / Tolerance",
+            "value": "hex-tolerance"
+          },
+          {
+            "name": "Clipboard / Compliance",
+            "value": "clipboard"
+          },
+          {
+            "name": "Waveform / Monitoring",
+            "value": "waveform"
+          },
+          {
+            "name": "Monitor / Display",
+            "value": "monitor"
+          },
+          {
+            "name": "Lock / QC",
+            "value": "lock"
+          },
+          {
+            "name": "Cube / Additive",
+            "value": "cube"
+          },
+          {
+            "name": "Clock / Traceability",
+            "value": "clock"
+          },
+          {
+            "name": "Shield / Accuracy",
+            "value": "check-shield"
+          },
+          {
+            "name": "Bar Chart / IIoT",
+            "value": "bar-chart"
+          },
+          {
+            "name": "Globe / Global Service",
+            "value": "globe"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "cardLink",
+        "label": "Card Link (URL)",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "section-header",
+    "fields": [
+      {
+        "component": "text",
+        "name": "eyebrow",
+        "label": "Eyebrow",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "subtitle",
+        "label": "Subtitle",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "ctaLink",
+        "label": "CTA Link (URL)",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "style",
+        "label": "Style",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default (centered)",
+            "value": ""
+          },
+          {
+            "name": "Dark Left",
+            "value": "dark-left"
+          },
+          {
+            "name": "News Inline (heading + CTA row)",
+            "value": "news-inline"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cta-link",
+    "fields": [
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Link Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "linkUrl",
+        "label": "Link URL",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "variant",
+        "label": "Variant",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Search Icon",
+            "value": "search"
+          },
+          {
+            "name": "Contact Button",
+            "value": "contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lang-switcher",
+    "fields": []
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "herolayout",
+        "label": "Hero Layout Style",
+        "options": [
+          {
+            "name": "Default",
+            "value": "overlay"
+          },
+          {
+            "name": "Image Left",
+            "value": "image-left"
+          },
+          {
+            "name": "Image Right",
+            "value": "image-right"
+          },
+          {
+            "name": "Image Top",
+            "value": "image-top"
+          },
+          {
+            "name": "Image Bottom",
+            "value": "image-bottom"
+          },
+          {
+            "name": "Image-Background Text-Left",
+            "value": "image-background-text-left"
+          },
+          {
+            "name": "Image-Background Text-Right",
+            "value": "image-background-text-right"
+          },
+          {
+            "name": "Fullscreen Vertical",
+            "value": "fullscreen-vertical"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "ctastyle",
+        "label": "CTA Style",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Button",
+            "value": "button"
+          },
+          {
+            "name": "Button Secondary",
+            "value": "button-secondary"
+          },
+          {
+            "name": "Link",
+            "value": "link"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hero-b2b",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "preheader",
+        "label": "Preheader",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "header",
+        "label": "Headline",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "cta1Text",
+        "label": "CTA 1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "cta1Link",
+        "label": "CTA 1 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "cta2Text",
+        "label": "CTA 2 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "cta2Link",
+        "label": "CTA 2 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "stat1Value",
+        "label": "Stat 1 Value",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "stat1Label",
+        "label": "Stat 1 Label",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "stat2Value",
+        "label": "Stat 2 Value",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "stat2Label",
+        "label": "Stat 2 Label",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "stat3Value",
+        "label": "Stat 3 Value",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "stat3Label",
+        "label": "Stat 3 Label",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "variant",
+        "label": "Variant",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default (image hero)",
+            "value": ""
+          },
+          {
+            "name": "CTA (dark, two-column)",
+            "value": "cta"
+          },
+          {
+            "name": "Centered (gradient, no image)",
+            "value": "centered"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "list",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rootPath",
+        "label": "Root Path",
+        "description": "EDS path whose children to list, e.g. /en/news"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "sortBy",
+        "label": "Sort By",
+        "options": [
+          {
+            "name": "Alphabetical",
+            "value": "alphabetical"
+          },
+          {
+            "name": "Last Modified (newest first)",
+            "value": "lastModified"
+          },
+          {
+            "name": "List Order (numeric)",
+            "value": "listOrder"
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "showDescription",
+        "label": "Show Description",
+        "value": false
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "showImage",
+        "label": "Show Image",
+        "value": false
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "showDate",
+        "label": "Show Date",
+        "value": false
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "limit",
+        "label": "Max Items",
+        "description": "Maximum number of items to show. Set to 0 for no limit.",
+        "value": 0
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "paginate",
+        "label": "Enable Pagination",
+        "description": "Show items across multiple pages instead of all at once.",
+        "value": false
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "pageSize",
+        "label": "Items Per Page",
+        "description": "Number of items per page (e.g. 5 or 10). Ignored when pagination is disabled.",
+        "value": 5
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "urlState",
+        "label": "Persist Page in URL",
+        "description": "Store the current page in ?page=N so links are shareable. Only applies when pagination is enabled.",
+        "value": false
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "listStyle",
+        "label": "List Style",
+        "description": "Visual style of the list.",
+        "options": [
+          {
+            "name": "Card",
+            "value": "card"
+          },
+          {
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "News Featured",
+            "value": "news-featured"
+          },
+          {
+            "name": "Related Articles",
+            "value": "related"
+          },
+          {
+            "name": "Footer Nav",
+            "value": "footer-nav"
+          }
+        ],
+        "value": "card"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "readMoreText",
+        "label": "Read More Label",
+        "description": "Text for the read-more link on news-featured cards. Leave blank to hide. E.g. 'Read more' or 'Continue reading'."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "description": "Column heading shown above the list (e.g. PRODUCTS). Used by footer-nav style."
+      }
+    ]
+  },
+  {
+    "id": "social-icons",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkedinUrl",
+        "label": "LinkedIn URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "twitterUrl",
+        "label": "Twitter/X URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "youtubeUrl",
+        "label": "YouTube URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "instagramUrl",
+        "label": "Instagram URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "facebookUrl",
+        "label": "Facebook URL"
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "parentLabel",
+        "label": "Parent Section Label",
+        "description": "Display text for the parent crumb link (e.g. 'News'). The href is derived automatically from the URL."
+      }
+    ]
+  },
+  {
+    "id": "tag",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "category",
+        "label": "Category Label",
+        "description": "Display text for the badge, e.g. 'PRODUCT LAUNCH'"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "variant",
+        "label": "Badge Style",
+        "options": [
+          {
+            "name": "Default (Gray)",
+            "value": ""
+          },
+          {
+            "name": "Product Launch (Navy/Gold)",
+            "value": "product-launch"
+          },
+          {
+            "name": "White Paper (Blue)",
+            "value": "white-paper"
+          },
+          {
+            "name": "Company (Dark Navy)",
+            "value": "company"
+          },
+          {
+            "name": "Industry Insight (Green)",
+            "value": "industry-insight"
+          },
+          {
+            "name": "Technical Note (Blue)",
+            "value": "technical-note"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pull-quote",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "label": "Quote Text"
+      }
+    ]
+  },
+  {
+    "id": "featured-image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "description": "Article hero image. Also set the same image in Page Properties → Featured Image so list card thumbnails stay in sync.",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "content-fragment",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "fragment",
+        "label": "Content Fragment",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "query",
+        "label": "Persisted Query Path",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "variableName",
+        "label": "Query Variable Name",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "display",
+        "label": "Display Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Spec Table — dark",
+            "value": ""
+          },
+          {
+            "name": "Spec Table — light",
+            "value": "light"
+          },
+          {
+            "name": "Raw JSON (debug)",
+            "value": "debug"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "header",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "logoImage",
+        "label": "Logo Image",
+        "description": "Logo image for the header (can include icon and text combined)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "logoAlt",
+        "label": "Logo Alt Text",
+        "valueType": "string",
+        "description": "Alternative text for the logo image for accessibility"
+      },
+      {
+        "component": "text",
+        "name": "brandName",
+        "label": "Brand Name",
+        "valueType": "string",
+        "description": "Brand name text displayed next to logo (optional if logo image contains text)"
+      }
+    ]
+  },
+  {
+    "id": "footer",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "logoImage",
+        "label": "Logo Image",
+        "description": "Logo image for the footer (can include icon and text combined)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "logoAlt",
+        "label": "Logo Alt Text",
+        "valueType": "string",
+        "description": "Alternative text for the logo image for accessibility"
+      },
+      {
+        "component": "text",
+        "name": "brandName",
+        "label": "Brand Name",
+        "valueType": "string",
+        "description": "Brand name text displayed next to logo (optional if logo image contains text)"
+      }
+    ]
+  }
+]

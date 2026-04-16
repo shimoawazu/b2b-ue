@@ -1,0 +1,29 @@
+{
+  "mappings": [
+    "/content/b2b-ue/language-masters/en/:/",
+    "/content/b2b-ue/language-masters/en:/en",
+    "/content/b2b-ue/language-masters/en/:/en/",
+    "/content/b2b-ue/language-masters/ja/:/ja/",
+    "/content/b2b-ue/language-masters/ja:/ja",
+    "/content/b2b-ue/language-masters/zh/:/zh/",
+    "/content/b2b-ue/language-masters/zh:/zh",
+    "/content/b2b-ue/language-masters/ko/:/ko/",
+    "/content/b2b-ue/language-masters/ko:/ko",
+    "/content/b2b-ue/language-masters/es/:/es/",
+    "/content/b2b-ue/language-masters/es:/es",
+    "/content/b2b-ue/language-masters/de/:/de/",
+    "/content/b2b-ue/language-masters/de:/de",
+    "/content/b2b-ue/language-masters/fr/:/fr/",
+    "/content/b2b-ue/language-masters/fr:/fr",
+    "/content/b2b-ue/language-masters/ar/:/ar/",
+    "/content/b2b-ue/language-masters/ar:/ar",
+    "/content/b2b-ue/configuration:/.helix/config.json",
+    "/content/b2b-ue/metadata:/metadata.json",
+    "/content/b2b-ue/redirects:/redirects.json",
+    "/content/b2b-ue/placeholders:/placeholders.json"
+  ],
+  "includes": [
+    "/content/b2b-ue/",
+    "/content/dam/b2b-ue/"
+  ]
+}

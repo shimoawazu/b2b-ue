@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Série SpectraLink 7000 : Redéfinir la mesure dimensionnelle en ligne"
+      jcr:description="Notre nouvelle plateforme CMM phare offre une incertitude de mesure de 0,05 µm — certifiée pour une utilisation dans les salles blanches de classe 10 000."
+      cq:lastModified="2026-03-18T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/product-launch]"
+      category="PRODUCT LAUNCH"
+      listOrder="1"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="Actualités"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="Lancement de produit"
+             variant="product-launch"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="Série SpectraLink 7000 : Redéfinir la mesure dimensionnelle en ligne"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;18 mars 2026 · Lancement de produit · 5 min de lecture&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;La série SpectraLink 7000 représente un bond fondamental dans la métrologie dimensionnelle sans contact. Conçus pour les environnements de production exigeants — salles blanches de semiconducteurs, centres d'usinage de précision et salles propres pour dispositifs médicaux — ces capteurs offrent une répétabilité submicronique à des cadences de production jusqu'alors réservées aux suites CMM hors ligne. Avec un boîtier classé IP67 et une plage de température de fonctionnement de −10 °C à +60 °C, la série 7000 est conçue pour le plancher d'usine, pas pour le laboratoire.&lt;/p&gt;&#xa;&lt;p&gt;Au cœur du système se trouve le moteur spectral cohérent de quatrième génération de Lumina, qui associe un laser à source balayée à 1550 nm à une chaîne d'acquisition ADC 24 bits. Il en résulte un plancher de bruit de mesure de ±0,08 µm RMS — soit une amélioration de 40 % par rapport à la génération précédente SpectraLink 5500. Le pré-tri intégré par vision artificielle permet au capteur de rejeter de manière autonome les pièces hors tolérance avant qu'elles n'atteignent l'assemblage en aval, réduisant considérablement les coûts de rebuts pour les lignes de production à forte diversité.&lt;/p&gt;"/>
+      </section_body1>
+      <!-- Pull Quote -->
+      <section_pullquote jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-pullquote">
+        <pull_quote jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Pull Quote"
+                    model="pull-quote"
+                    text="&lt;p&gt;« Pour la première fois, les fabricants peuvent atteindre une précision de niveau CMM à la vitesse de la ligne — sans sacrifier le débit ni l'espace au sol. La SpectraLink 7000 élimine le compromis qui a défini la métrologie en ligne depuis deux décennies. »&lt;/p&gt;"/>
+      </section_pullquote>
+      <!-- Article Body — paragraph 3 -->
+      <section_body2 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;La série 7000 est fournie avec le LuminaLink SDK, une couche API unifiée prenant en charge OPC-UA, EtherNet/IP et MQTT, garantissant une intégration transparente avec les systèmes SCADA, MES et les infrastructures de données Industry 4.0. Un nouvel algorithme de calibration adaptative compense en permanence la dérive thermique, éliminant les périodes de préchauffage qui ralentissent les changements de production. Les clients du plan SpectraLink Assurance bénéficient d'un accès aux diagnostics à distance et aux alertes de maintenance prédictive via le tableau de bord Lumina Cloud.&lt;/p&gt;"/>
+      </section_body2>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/fr/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

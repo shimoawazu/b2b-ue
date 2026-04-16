@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/placeholders"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Placeholders"
+      sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+      columns="[Key,Text]"
+      hideInNav="{Boolean}true">
+    <row_site_name
+        jcr:primaryType="nt:unstructured"
+        Key="site-name"
+        Text="/content/b2b-ue"/>
+    <row_languages
+        jcr:primaryType="nt:unstructured"
+        Key="languages"
+        Text="en,ja,zh,ko,es,de,fr,ar"/>
+    <row_hostname
+        jcr:primaryType="nt:unstructured"
+        Key="hostname"
+        Text="https://author-p161901-e1740392.adobeaemcloud.com"/>
+    <row_company
+        jcr:primaryType="nt:unstructured"
+        Key="company-name"
+        Text="Lumina Noventis"/>
+    <row_tagline
+        jcr:primaryType="nt:unstructured"
+        Key="tagline"
+        Text="Precision. Innovation. Excellence."/>
+  </jcr:content>
+</jcr:root>

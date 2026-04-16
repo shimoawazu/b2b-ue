@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:description="B2B UE starter for AEM EDS + Universal Editor. 8 languages (EN/JA/ZH/KO/ES/DE/FR/AR), dynamic navigation, list block."
+    jcr:primaryType="sling:Folder"
+    jcr:title="B2B UE Starter"
+    createdBy="Adobe"
+    name="b2b-ue"
+    version="1.0.0"
+    useCases="[AEM Sites delivered with Edge Delivery Services,Edge Delivery Services]"/>

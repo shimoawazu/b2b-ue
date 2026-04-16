@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+  <filter root="/conf/global/site-templates/b2b-ue-1.0.0"/>
+  <!-- Tags must be installed before QSC runs site.zip (pages reference them) -->
+  <filter root="/content/cq:tags/b2b-ue" mode="merge"/>
+</workspaceFilter>

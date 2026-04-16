@@ -1,0 +1,145 @@
+version: 1
+
+indices:
+  site-en: &base-site
+    include:
+      - '/'
+      - '/en'
+      - '/en/**'
+    exclude:
+      - /en/search
+      - /en/nav
+      - /en/footer
+    target: /en/query-index.json
+    properties:
+      title:
+        select: main h1
+        value: textContent(el)
+      navTitle:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      body:
+        select: main
+        value: textContent(el)
+      image:
+        select: head > meta[property="og:image"]
+        value: match(attribute(el, "content"), "^(https?:\/\/.*?(aem.live))+(.*)|^(.*)")
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
+      navOrder:
+        select: head > meta[name="navorder"]
+        value: attribute(el, "content")
+      hideInNav:
+        select: head > meta[name="hideinnav"]
+        value: attribute(el, "content")
+      listOrder:
+        select: head > meta[name="listorder"]
+        value: attribute(el, "content")
+      category:
+        select: head > meta[name="category"]
+        value: attribute(el, "content")
+
+  products-en:
+    <<: *base-site
+    include:
+      - '/en/products/**'
+    target: /en/products/query-index.json
+
+  news-en:
+    <<: *base-site
+    include:
+      - '/en/news/**'
+    target: /en/news/query-index.json
+
+  site-ja:
+    <<: *base-site
+    include:
+      - '/ja'
+      - '/ja/**'
+    exclude:
+      - /ja/search
+      - /ja/nav
+      - /ja/footer
+    target: /ja/query-index.json
+
+  products-ja:
+    <<: *base-site
+    include:
+      - '/ja/products/**'
+    target: /ja/products/query-index.json
+
+  news-ja:
+    <<: *base-site
+    include:
+      - '/ja/news/**'
+    target: /ja/news/query-index.json
+
+  site-zh:
+    <<: *base-site
+    include:
+      - '/zh'
+      - '/zh/**'
+    exclude:
+      - /zh/search
+      - /zh/nav
+      - /zh/footer
+    target: /zh/query-index.json
+
+  site-ko:
+    <<: *base-site
+    include:
+      - '/ko'
+      - '/ko/**'
+    exclude:
+      - /ko/search
+      - /ko/nav
+      - /ko/footer
+    target: /ko/query-index.json
+
+  site-es:
+    <<: *base-site
+    include:
+      - '/es'
+      - '/es/**'
+    exclude:
+      - /es/search
+      - /es/nav
+      - /es/footer
+    target: /es/query-index.json
+
+  site-de:
+    <<: *base-site
+    include:
+      - '/de'
+      - '/de/**'
+    exclude:
+      - /de/search
+      - /de/nav
+      - /de/footer
+    target: /de/query-index.json
+
+  site-fr:
+    <<: *base-site
+    include:
+      - '/fr'
+      - '/fr/**'
+    exclude:
+      - /fr/search
+      - /fr/nav
+      - /fr/footer
+    target: /fr/query-index.json
+
+  site-ar:
+    <<: *base-site
+    include:
+      - '/ar'
+      - '/ar/**'
+    exclude:
+      - /ar/search
+      - /ar/nav
+      - /ar/footer
+    target: /ar/query-index.json

@@ -1,0 +1,549 @@
+/*
+ * B2B UE — Global Styles
+ * Brand: Corporate Blue (Epson/Anritsu/Konica Minolta reference)
+ */
+
+:root {
+  /* Brand colors */
+  --brand-primary: #003087;
+  --brand-secondary: #0066cc;
+  --brand-accent: #e8f0fe;
+
+  /* Semantic color tokens */
+  --background-color: #ffffff;
+  --dark-color: #1a1a1a;
+  --light-color: #f5f7fa;
+  --text-color: #1a1a1a;
+  --text-light: #ffffff;
+  --text-subtle: #555555;
+  --link-color: var(--brand-primary);
+  --link-hover-color: var(--brand-secondary);
+  --main-accent-color: var(--brand-primary);
+  --border-color: #dde3ec;
+
+  /* Nav / footer */
+  --nav-background-color: var(--brand-primary);
+  --nav-text-color: #ffffff;
+  --footer-background-color: #1a1a1a;
+  --footer-text-color: #cccccc;
+  --nav-height: 64px;
+
+  /* Typography */
+  --body-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --heading-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-arabic: 'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif;
+
+  /* Body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+
+  /* Heading sizes */
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 36px;
+  --heading-font-size-l: 28px;
+  --heading-font-size-m: 22px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --section-padding: 3rem 1.5rem;
+
+  /* Border radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+}
+
+@media (width >= 900px) {
+  :root {
+    --body-font-size-m: 16px;
+    --body-font-size-s: 14px;
+    --heading-font-size-xxl: 52px;
+    --heading-font-size-xl: 40px;
+    --heading-font-size-l: 30px;
+    --heading-font-size-m: 24px;
+    --heading-font-size-s: 20px;
+    --heading-font-size-xs: 18px;
+  }
+}
+
+/* RTL support for Arabic */
+[dir="rtl"] {
+  font-family: var(--font-arabic), var(--body-font-family);
+  text-align: right;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: var(--font-arabic), var(--heading-font-family);
+}
+
+/* Reset & base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: none;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.appear {
+  display: block;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+header .header,
+footer .footer {
+  visibility: hidden;
+}
+
+header .header[data-block-status="loaded"],
+footer .footer[data-block-status="loaded"] {
+  visibility: visible;
+}
+
+header .header,
+footer .footer {
+  background-color: var(--nav-background-color);
+}
+
+footer .footer {
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dark-color);
+}
+
+h1 { font-size: var(--heading-font-size-xxl); }
+h2 { font-size: var(--heading-font-size-xl); }
+h3 { font-size: var(--heading-font-size-l); }
+h4 { font-size: var(--heading-font-size-m); }
+h5 { font-size: var(--heading-font-size-s); }
+h6 { font-size: var(--heading-font-size-xs); }
+
+p, dl, ol, ul, pre, blockquote {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+}
+
+/* Links */
+a, a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+a::after {
+  font-family: 'Font Awesome 5 Solid';
+  content: "\f105";
+  color: var(--link-color);
+  font-size: 14px;
+  font-weight: 900;
+  width: 15px;
+  height: 20px;
+  float: right;
+  padding: 1px 10px;
+}
+
+a:hover::after, a:focus::after {
+  color: var(--link-hover-color);
+}
+
+[dir="rtl"] a::after {
+  content: "\f104";
+  float: left;
+}
+
+/* Buttons */
+.button-container a.button,
+a.button:any-link,
+button {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: var(--brand-primary);
+  color: var(--text-light);
+  border: 2px solid var(--brand-primary);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button-container a.button::after,
+a.button::after {
+  content: none;
+}
+
+.button-container a.button:hover,
+a.button:hover {
+  background-color: var(--brand-secondary);
+  border-color: var(--brand-secondary);
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+a.button.secondary {
+  background-color: transparent;
+  color: var(--brand-primary);
+}
+
+a.button.secondary:hover {
+  background-color: var(--brand-accent);
+}
+
+/* Images */
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+main picture {
+  display: block;
+  overflow: hidden;
+}
+
+/* Icons */
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Sections */
+main > .section {
+  margin: 0;
+  padding: var(--space-xl) 0;
+}
+
+main > .section > div {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 var(--space-lg);
+}
+
+main > .section:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media (width >= 900px) {
+  main > .section > div {
+    padding: 0 var(--space-xl);
+  }
+}
+
+/* Section backgrounds */
+main .section.light,
+main .section.highlight {
+  background-color: var(--light-color);
+}
+
+main .section.dark {
+  background-color: var(--dark-color);
+  color: var(--text-light);
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3 {
+  color: var(--text-light);
+}
+
+main .section.brand {
+  background-color: var(--brand-primary);
+  color: var(--text-light);
+}
+
+/* Section background image */
+main .section.section-has-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+main .section > picture.section-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+main .section > picture.section-bg::before {
+  content: none;
+}
+
+main .section > picture.section-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main .section.section-has-bg > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* ----------------------------------------
+   Feature Split — 2-column dark layout
+   Left: section-header (dark-left), Right: cards (feature-tile)
+----------------------------------------- */
+main .section.feature-split {
+  background-color: #001840;
+  padding: 0;
+}
+
+main .section.feature-split > div {
+  max-width: unset;
+  padding: 0;
+}
+
+@media (width >= 900px) {
+  main .section.feature-split {
+    display: flex;
+    align-items: stretch;
+  }
+
+  main .section.feature-split > div:first-child {
+    flex: 0 0 42%;
+    display: flex;
+    align-items: center;
+  }
+
+  main .section.feature-split > div:last-child {
+    flex: 1;
+  }
+}
+
+/* Universal Editor edit mode */
+.adobe-ue-edit header,
+.adobe-ue-preview header {
+  position: initial;
+  background: var(--brand-primary);
+}
+
+.adobe-ue-edit main,
+.adobe-ue-preview main {
+  height: initial;
+  min-height: 100px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Code */
+code, pre {
+  font-size: var(--body-font-size-s);
+}
+
+pre {
+  padding: 16px;
+  border-radius: var(--border-radius-md);
+  background-color: var(--light-color);
+  overflow-x: auto;
+}
+
+/* ============================================================
+   Article page section styles
+   article-header, article-body, related-articles
+   ============================================================ */
+
+/* ── Article header (H1 + meta row + bottom divider) ─────── */
+.section.article-header {
+  padding: 20px 64px 24px;
+  border-bottom: 1px solid #e8ecf5;
+}
+
+.section.article-header .default-content-wrapper {
+  max-width: 760px;
+  padding: 0;
+}
+
+.section.article-header h1 {
+  font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #003087;
+  margin: 0 0 20px;
+}
+
+/* Meta row: "March 18, 2026 · Product Launch · 5 min read" */
+.section.article-header .default-content-wrapper p {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  color: #8a97a8;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  line-height: 1.4;
+}
+
+/* ── Article hero image section ──────────────────────────── */
+.section.article-hero {
+  padding: 0 64px 32px;
+}
+
+.section.article-hero .default-content-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+/* ── Article body (prose paragraphs) ─────────────────────── */
+.section.article-body {
+  padding: 36px 64px;
+}
+
+.section.article-body .default-content-wrapper {
+  max-width: 720px;
+  padding: 0;
+}
+
+.section.article-body p {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  color: #4a5568;
+  line-height: 1.75;
+  margin: 0 0 20px;
+}
+
+.section.article-body p:last-child {
+  margin-bottom: 0;
+}
+
+.section.article-body h2 {
+  font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #003087;
+  margin: 36px 0 16px;
+}
+
+.section.article-body ul,
+.section.article-body ol {
+  margin: 0 0 20px 20px;
+  padding: 0;
+  color: #4a5568;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.section.article-body li {
+  margin-bottom: 6px;
+}
+
+/* ── Pull-quote wrapper: no extra padding (block handles its own) */
+.section.article-pullquote {
+  padding: 8px 0 20px;
+}
+
+/* ── Related articles section ────────────────────────────── */
+.section.related-articles {
+  margin: 0 64px;
+  padding: 32px 0 64px;
+  border-top: 1px solid #e8ecf5;
+}
+
+.section.related-articles .default-content-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+/* "RELATED ARTICLES" label rendered as first <p> in a text component */
+.section.related-articles .default-content-wrapper > p:first-child,
+.section.related-articles .default-content-wrapper > p:only-child {
+  font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a97a8;
+  margin: 0 0 4px;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (width < 1024px) {
+  .section.article-header h1 {
+    font-size: 36px;
+  }
+}
+
+@media (width < 768px) {
+  .section.article-header,
+  .section.article-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section.article-header h1 {
+    font-size: 28px;
+  }
+
+  .section.article-hero {
+    padding: 20px 20px 0;
+  }
+
+  .section.related-articles {
+    margin: 0 20px;
+    padding-bottom: 48px;
+  }
+}

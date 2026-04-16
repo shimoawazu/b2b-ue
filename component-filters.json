@@ -1,0 +1,47 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "breadcrumb",
+      "columns",
+      "tag",
+      "featured-image",
+      "content-fragment",
+      "cta-link",
+      "fragment",
+      "hero",
+      "hero-b2b",
+      "pull-quote",
+      "section-header",
+      "image",
+      "lang-switcher",
+      "list",
+      "separator",
+      "social-icons",
+      "solutions-grid",
+      "spec-table",
+      "text",
+      "title"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "image",
+      "text",
+      "title"
+    ]
+  }
+]

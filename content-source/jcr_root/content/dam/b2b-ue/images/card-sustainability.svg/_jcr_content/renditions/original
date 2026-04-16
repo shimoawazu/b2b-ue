@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <rect width="600" height="300" fill="#e8f5e9"/>
+  <path d="M300 80 C260 80 220 110 220 150 C220 190 260 210 300 210 C340 210 380 190 380 150 C380 110 340 80 300 80Z" fill="none" stroke="#2e7d32" stroke-width="3"/>
+  <path d="M300 210 L300 260" stroke="#2e7d32" stroke-width="3"/>
+  <path d="M260 160 C260 130 280 110 300 110" stroke="#4caf50" stroke-width="2" fill="none"/>
+  <text x="300" y="285" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#2e7d32" text-anchor="middle">SUSTAINABILITY</text>
+</svg>

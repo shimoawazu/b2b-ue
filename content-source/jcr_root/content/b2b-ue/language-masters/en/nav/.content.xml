@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      hideInNav="{Boolean}true"
+      jcr:title="Nav"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <image jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/image/v1/image"
+               image="/content/dam/b2b-ue/images/lumina-noventis-logo.png"
+               imageAlt="Lumina Noventis"/>
+      </section>
+      <section_nav jcr:primaryType="nt:unstructured"
+                   sling:resourceType="core/franklin/components/section/v1/section">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;ul&gt;&lt;/ul&gt;"/>
+      </section_nav>
+      <section_tools jcr:primaryType="nt:unstructured"
+                     sling:resourceType="core/franklin/components/section/v1/section">
+        <cta_link_search jcr:primaryType="nt:unstructured"
+                         sling:resourceType="core/franklin/components/block/v1/block"
+                         name="CTA Link"
+                         model="cta-link"
+                         variant="search"/>
+        <lang_switcher jcr:primaryType="nt:unstructured"
+                       sling:resourceType="core/franklin/components/block/v1/block"
+                       name="Lang Switcher"
+                       model="lang-switcher"/>
+        <cta_link_contact jcr:primaryType="nt:unstructured"
+                          sling:resourceType="core/franklin/components/block/v1/block"
+                          name="CTA Link"
+                          model="cta-link"
+                          linkText="Contact Us"
+                          linkUrl="/en/contact"
+                          variant="contact"/>
+      </section_tools>
+    </root>
+  </jcr:content>
+</jcr:root>

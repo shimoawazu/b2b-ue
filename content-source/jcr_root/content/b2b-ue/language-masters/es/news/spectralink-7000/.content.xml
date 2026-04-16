@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Serie SpectraLink 7000: Redefiniendo la Medición Dimensional en Línea"
+      jcr:description="Nuestra nueva plataforma CMM insignia ofrece una incertidumbre de medición de 0,05 µm, certificada para uso en salas limpias Clase 10.000."
+      cq:lastModified="2026-03-18T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/product-launch]"
+      category="PRODUCT LAUNCH"
+      listOrder="1"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="Noticias"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="Lanzamiento de producto"
+             variant="product-launch"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="Serie SpectraLink 7000: Redefiniendo la Medición Dimensional en Línea"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;18 de marzo de 2026 · Lanzamiento de producto · 5 min de lectura&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;La serie SpectraLink 7000 representa un salto fundamental en la metrología dimensional sin contacto. Diseñados para entornos de producción exigentes — fabs de semiconductores, centros de mecanizado de precisión y salas limpias para dispositivos médicos — estos sensores ofrecen repetibilidad submicrónica a tasas de rendimiento que antes solo eran alcanzables en suites CMM fuera de línea. Con una carcasa con clasificación IP67 y un rango de temperatura de operación de −10 °C a +60 °C, la serie 7000 está construida para el piso de fábrica, no para el laboratorio.&lt;/p&gt;&#xa;&lt;p&gt;En el núcleo del sistema se encuentra el Motor Espectral Coherente de cuarta generación de Lumina, que combina un láser de fuente barredora de 1550 nm con una cadena de adquisición ADC de 24 bits. El resultado es un piso de ruido de medición de ±0,08 µm RMS — una mejora del 40% respecto a la generación anterior SpectraLink 5500. La preselección integrada por visión artificial permite al sensor rechazar de forma autónoma las piezas fuera de tolerancia antes de que lleguen al ensamblaje posterior, reduciendo drásticamente los costos de desperdicio en líneas de producción de alta mezcla.&lt;/p&gt;"/>
+      </section_body1>
+      <!-- Pull Quote -->
+      <section_pullquote jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-pullquote">
+        <pull_quote jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Pull Quote"
+                    model="pull-quote"
+                    text="&lt;p&gt;«Por primera vez, los fabricantes pueden lograr la precisión de nivel CMM a velocidad de línea — sin sacrificar el rendimiento ni el espacio en el suelo. La SpectraLink 7000 elimina el compromiso que ha definido la metrología en línea durante dos décadas.»&lt;/p&gt;"/>
+      </section_pullquote>
+      <!-- Article Body — paragraph 3 -->
+      <section_body2 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;La serie 7000 se entrega con LuminaLink SDK, una capa de API unificada compatible con OPC-UA, EtherNet/IP y MQTT, que garantiza una integración perfecta con SCADA, MES y tejidos de datos de Industry 4.0. Un nuevo algoritmo de calibración adaptativa compensa continuamente la deriva térmica, eliminando los períodos de calentamiento que ralentizan los cambios de producción. Los clientes del Plan SpectraLink Assurance obtienen acceso a diagnósticos remotos y alertas de mantenimiento predictivo a través del panel de control Lumina Cloud.&lt;/p&gt;"/>
+      </section_body2>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/es/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

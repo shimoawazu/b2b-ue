@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="ميزانيات عدم اليقين في GD&amp;amp;T للأجهزة الطبية: دليل عملي"
+      jcr:description="دليل شامل لبناء ميزانيات عدم يقين قابلة للدفاع عنها لقياس GD&amp;amp;T في تصنيع الأجهزة الطبية الخاضعة لرقابة FDA."
+      cq:lastModified="2026-02-27T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/white-paper]"
+      category="WHITE PAPER"
+      listOrder="2"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="الأخبار"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="ورقة بيضاء"
+             variant="white-paper"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="ميزانيات عدم اليقين في GD&amp;amp;T للأجهزة الطبية: دليل عملي"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;27 فبراير 2026 · ورقة بيضاء · وقت القراءة: 8 دقائق&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;تتناول هذه الورقة البيضاء أحد أكثر التحديات استمرارًا في تصنيع الأجهزة الطبية الخاضعة لرقابة FDA: بناء ميزانيات عدم اليقين للأبعاد الهندسية والتفاوتات (GD&amp;amp;T) التي تستوفي كلًا من متطلبات المراجعة الخاصة بـ ISO 14253-1 وFDA 21 CFR Part 11.&lt;/p&gt;&#xa;&lt;p&gt;استنادًا إلى أكثر من عقد من خبرة النشر لدى صانعي الأجهزة من الفئتين II وIII، يقدم فريق القياس لدينا منهجية منظمة خطوة بخطوة لتحديد جميع مصادر عدم اليقين في القياس الجوهرية وقياسها وتوثيقها — من تباين المشغلين وامتثال التجهيزات إلى تدرجات درجات الحرارة البيئية.&lt;/p&gt;&#xa;&lt;h2&gt;ما ستتعلمه&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;إطار ميزانية عدم اليقين ذو الخمس فئات (مصادر النوع A والنوع B)&lt;/li&gt;&#xa;&lt;li&gt;كيفية حساب عدم اليقين الموسع U95 لمقاطع ملف السطح والموضع الحقيقي&lt;/li&gt;&#xa;&lt;li&gt;تصميم دراسة Gauge R&amp;amp;R لأنظمة قياس GD&amp;amp;T القائمة على CMM&lt;/li&gt;&#xa;&lt;li&gt;قوالب توثيق متوافقة مع ISO/IEC 17025 وتوقعات مراجعة FDA&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h2&gt;تنزيل الورقة البيضاء&lt;/h2&gt;&#xa;&lt;p&gt;أكمل النموذج في صفحة الموارد الخاصة بنا لتلقي الورقة البيضاء الكاملة المكونة من 28 صفحة، والتي تتضمن أمثلة عملية محلولة وقوالب ميزانية عدم يقين قابلة للتحرير بتنسيق Excel.&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/ar/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

@@ -1,0 +1,184 @@
+/* ── Base ────────────────────────────────────────────────────────── */
+footer {
+  background: #001428;
+  color: #fff;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer a::after,
+footer a:hover::after {
+  content: '';
+  padding: 0;
+  width: 0;
+  height: 0;
+  float: none;
+  font-size: 0;
+}
+
+.footer-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* ── Brand section ───────────────────────────────────────────────── */
+.footer-brand {
+  padding: 64px 24px 0;
+}
+
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.footer-logo-mark {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer-logo-name {
+  font-family: 'Inter Tight', Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* base p reset — must come BEFORE pseudo-class overrides */
+.footer-brand .default-content-wrapper p {
+  margin: 0;
+}
+
+/* tagline (first <p> in brand text block) */
+.footer-brand .default-content-wrapper p:first-child {
+  color: rgb(255 255 255 / 38%);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+/* description (second <p>) */
+.footer-brand .default-content-wrapper p:nth-child(2) {
+  color: rgb(255 255 255 / 55%);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  max-width: 260px;
+}
+
+/* ── Bottom bar ──────────────────────────────────────────────────── */
+.footer-bottom {
+  padding: 24px 24px 40px;
+  margin-top: 32px;
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  clear: both;
+}
+
+.footer-bottom .default-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* bottom bar p rules — higher specificity to avoid descending-specificity lint error */
+.footer-bottom .default-content-wrapper p:not(:last-child),
+.footer-bottom .default-content-wrapper p:last-child {
+  margin: 0;
+  font-size: 12px;
+  color: rgb(255 255 255 / 40%);
+}
+
+.footer-bottom .default-content-wrapper p:last-child {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom .default-content-wrapper a {
+  color: rgb(255 255 255 / 40%);
+}
+
+.footer-bottom .default-content-wrapper a:hover {
+  color: rgb(255 255 255 / 80%);
+}
+
+/* ── Nav section ─────────────────────────────────────────────────── */
+.footer-nav {
+  padding: 40px 24px 0;
+}
+
+/* On mobile, lay out nav cols in a 2-column grid */
+.footer-nav > .section-wrapper,
+.footer-nav > .default-content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px 24px;
+}
+
+/* EDS wraps each block in a .{block-name}-wrapper div — make those transparent to grid */
+.footer-nav .list-wrapper,
+.footer-nav .list-container {
+  display: contents;
+}
+
+/* ── Desktop layout ─────────────────────────────────────────────── */
+@media (width >= 900px) {
+  .footer-brand {
+    float: left;
+    width: 260px;
+    flex-shrink: 0;
+    padding: 64px 0 0 96px;
+    box-sizing: border-box;
+  }
+
+  .footer-nav {
+    overflow: hidden;
+    padding: 64px 96px 0 48px;
+  }
+
+  /* On desktop, 4-column grid for nav cols */
+  .footer-nav > .section-wrapper,
+  .footer-nav > .default-content-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 40px;
+    align-items: start;
+  }
+
+  .footer-bottom {
+    padding: 32px 96px 48px;
+    margin-top: 48px;
+  }
+
+  .footer-bottom .default-content-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ── RTL (Arabic) overrides ──────────────────────────────────────── */
+@media (width >= 900px) {
+  [dir="rtl"] .footer-brand {
+    float: right;
+    padding: 64px 96px 0 0;
+  }
+
+  [dir="rtl"] .footer-nav {
+    padding: 64px 48px 0 96px;
+  }
+}

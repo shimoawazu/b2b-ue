@@ -1,0 +1,69 @@
+{
+  "definitions": [
+    {
+      "title": "Section Header",
+      "id": "section-header",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Section Header",
+              "model": "section-header"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "section-header",
+      "fields": [
+        {
+          "component": "text",
+          "name": "eyebrow",
+          "label": "Eyebrow",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "heading",
+          "label": "Heading",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "subtitle",
+          "label": "Subtitle",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "ctaText",
+          "label": "CTA Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "ctaLink",
+          "label": "CTA Link (URL)",
+          "valueType": "string"
+        },
+        {
+          "component": "select",
+          "name": "style",
+          "label": "Style",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            { "name": "Default (centered)", "value": "" },
+            { "name": "Dark Left", "value": "dark-left" },
+            { "name": "News Inline (heading + CTA row)", "value": "news-inline" }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

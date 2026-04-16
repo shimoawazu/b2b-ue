@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="SpectraLink 7000 Series: Redefining In-Line Dimensional Measurement"
+      jcr:description="Our new flagship CMM platform delivers 0.05 µm measurement uncertainty — certified for use in Class 10,000 cleanrooms."
+      cq:lastModified="2026-03-18T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/product-launch]"
+      category="PRODUCT LAUNCH"
+      listOrder="1"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="SpectraLink 7000 Series: Redefining In-Line Dimensional Measurement"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;March 18, 2026 &amp;middot; Product Launch &amp;middot; 5 min read&lt;/p&gt;"/>
+      </section>
+
+      <!-- Article Body — paragraphs 1 and 2 -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;The SpectraLink 7000 Series represents a fundamental leap in non-contact dimensional metrology. Engineered for demanding production environments — semiconductor fabs, precision machining centers, and medical device cleanrooms — these sensors deliver sub-micron repeatability at throughput rates previously achievable only in offline CMM suites. With an IP67-rated housing and operating temperature range of -10°C to +60°C, the 7000 Series is built for the factory floor, not the laboratory.&lt;/p&gt;&#xa;&lt;p&gt;At the core of the system is Lumina’s fourth-generation Coherent Spectral Engine, which pairs a 1550&amp;thinsp;nm swept-source laser with a 24-bit ADC acquisition chain. The result is a measurement noise floor of ±0.08&amp;thinsp;μm RMS — a 40% improvement over the previous SpectraLink 5500 generation. Integrated machine-vision pre-screening allows the sensor to autonomously reject out-of-tolerance parts before they reach downstream assembly, dramatically reducing scrap costs for high-mix production lines.&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Pull Quote -->
+      <section_pullquote jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-pullquote">
+        <pull_quote jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Pull Quote"
+                    model="pull-quote"
+                    text="&lt;p&gt;“For the first time, manufacturers can achieve CMM-grade accuracy at line speed — without sacrificing throughput or floor space. The SpectraLink 7000 eliminates the trade-off that has defined in-line metrology for two decades.”&lt;/p&gt;"/>
+      </section_pullquote>
+
+      <!-- Article Body — paragraph 3 -->
+      <section_body2 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;The 7000 Series ships with LuminaLink SDK, a unified API layer supporting OPC-UA, EtherNet/IP, and MQTT — ensuring seamless integration with SCADA, MES, and Industry 4.0 data fabrics. A new adaptive calibration algorithm continuously compensates for thermal drift, eliminating the warm-up periods that slow production changeovers. Customers on the SpectraLink Assurance Plan gain access to remote diagnostics and predictive maintenance alerts via the Lumina Cloud dashboard.&lt;/p&gt;"/>
+      </section_body2>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/en/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

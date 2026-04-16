@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="SpectraLink 7000シリーズ：インライン寸法計測の再定義"
+      jcr:description="新フラッグシップCMMプラットフォームは、クラス10,000クリーンルームでの使用に認定された0.05 µm測定不確かさを実現します。"
+      cq:lastModified="2026-03-18T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/product-launch]"
+      category="PRODUCT LAUNCH"
+      listOrder="1"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="ニュース"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="製品ローンチ"
+             variant="product-launch"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="SpectraLink 7000シリーズ：インライン寸法計測の再定義"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;2026年3月18日 · 製品ローンチ · 読了時間：5分&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;SpectraLink 7000シリーズは、非接触式寸法計測の分野における根本的な飛躍を体現しています。半導体ファブ、精密加工センター、医療機器クリーンルームといった過酷な生産環境向けに設計されたこれらのセンサーは、これまでオフラインのCMMスイートでのみ実現可能だったスループットレートで、サブミクロンの繰り返し精度を実現します。IP67規格の筐体と−10°C〜+60°Cの動作温度範囲により、7000シリーズは実験室ではなく、工場のフロアに向けて構築されています。&lt;/p&gt;&#xa;&lt;p&gt;システムの中核を担うのは、Luminaの第4世代コヒーレント・スペクトラル・エンジンです。1550 nm掃引光源レーザーと24ビットADC取得チェーンを組み合わせることで、計測ノイズフロア±0.08 µm RMSを実現——前世代のSpectraLink 5500比で40%の改善です。統合されたマシンビジョン事前選別機能により、センサーは許容範囲外の部品を下流の組み立て工程に到達する前に自律的に排除し、多品種生産ラインのスクラップコストを大幅に削減します。&lt;/p&gt;"/>
+      </section_body1>
+      <!-- Pull Quote -->
+      <section_pullquote jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-pullquote">
+        <pull_quote jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Pull Quote"
+                    model="pull-quote"
+                    text="&lt;p&gt;「初めて、メーカーはスループットやフロアスペースを犠牲にすることなく、ライン速度でCMMグレードの精度を達成できるようになりました。SpectraLink 7000は、20年間にわたってインライン計測を定義してきたトレードオフを解消します。」&lt;/p&gt;"/>
+      </section_pullquote>
+      <!-- Article Body — paragraph 3 -->
+      <section_body2 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;7000シリーズには、OPC-UA、EtherNet/IP、MQTTをサポートする統合APIレイヤー「LuminaLink SDK」が付属しており、SCADA、MES、Industry 4.0データファブリックとのシームレスな統合を実現します。新しい適応型キャリブレーションアルゴリズムは熱ドリフトを継続的に補正し、生産切り替え時のウォームアップ時間を不要にします。SpectraLink Assuranceプランのお客様は、Lumina Cloudダッシュボードを通じてリモート診断と予知保全アラートにアクセスできます。&lt;/p&gt;"/>
+      </section_body2>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/ja/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

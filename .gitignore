@@ -1,0 +1,29 @@
+design-assets/
+.hlx/*
+coverage/*
+logs/*
+node_modules/*
+eds-workspace/*
+
+helix-importer-ui
+.DS_Store
+*.bak
+.idea
+
+# Generated build artifacts (build-packages.py output)
+site.zip
+b2b-ue-template-1.0.0.zip
+b2b-ue-site-1.0.0.zip
+content-package/jcr_root/conf/global/site-templates/b2b-ue-1.0.0/site.zip
+
+CLAUDE.md
+
+# Environment variables (local only)
+.env
+
+# Local todo tracking (not shared)
+todo/
+
+# One-time utility scripts (applied, no longer needed in repo)
+fix-cfm-model.py
+update-persisted-query.py

@@ -1,0 +1,263 @@
+.section-header-container .section-header-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 24px 48px;
+  text-align: center;
+}
+
+.section-header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Eyebrow with decorative lines */
+.section-header-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: #e8b400;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-header-line {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: #e8b400;
+  flex-shrink: 0;
+}
+
+/* Heading */
+.section-header-heading {
+  margin: 0;
+  color: #003087;
+  font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+/* Subtitle */
+.section-header-subtitle {
+  max-width: 560px;
+  color: #4a5568;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.section-header-subtitle p {
+  margin: 0;
+  color: inherit;
+}
+
+/* ----------------------------------------
+   News-inline variant — heading left, CTA right, gold bar eyebrow
+----------------------------------------- */
+.section-header-container:has(.section-header.news-inline) .section-header-wrapper {
+  max-width: unset;
+  margin: 0;
+  text-align: left;
+  padding: 64px 64px 40px;
+}
+
+.section-header.news-inline .section-header-inner {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.section-header.news-inline .section-header-eyebrow {
+  flex-basis: 100%;
+  color: #e8b400;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+/* Gold bar before eyebrow text — CSS-only, no JS DOM node */
+.section-header.news-inline .section-header-eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #e8b400;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.section-header.news-inline .section-header-heading {
+  flex: 1;
+  color: #003087;
+  font-size: 34px;
+  text-align: left;
+  margin: 0;
+}
+
+.section-header.news-inline .section-header-subtitle {
+  flex-basis: 100%;
+  color: #4a5568;
+  max-width: 100%;
+  margin-top: 8px;
+}
+
+/* CTA link aligned right, baseline of heading */
+.section-header.news-inline .section-header-cta {
+  flex-shrink: 0;
+  color: #003087;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #e8b400;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.section-header.news-inline .section-header-cta::after {
+  content: none;
+}
+
+.section-header.news-inline .section-header-cta:hover {
+  color: #0066cc;
+  border-bottom-color: #0066cc;
+  text-decoration: none;
+}
+
+@media (width < 900px) {
+  .section-header-container:has(.section-header.news-inline) .section-header-wrapper {
+    padding: 48px 32px 32px;
+  }
+}
+
+@media (width < 600px) {
+  .section-header-container:has(.section-header.news-inline) .section-header-wrapper {
+    padding: 40px 20px 28px;
+  }
+
+  .section-header.news-inline .section-header-heading {
+    font-size: 22px;
+    /* flex: 1 keeps heading and CTA on the same row — do NOT set flex-basis: 100% */
+  }
+
+  .section-header.news-inline .section-header-cta {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
+
+/* ----------------------------------------
+   Dark-left variant
+----------------------------------------- */
+
+/* Override wrapper alignment via :has() */
+.section-header-container:has(.section-header.dark-left) .section-header-wrapper {
+  max-width: unset;
+  margin: 0;
+  text-align: left;
+  padding: 64px 48px;
+}
+
+.section-header.dark-left .section-header-inner {
+  align-items: flex-start;
+}
+
+/* Gold rule above eyebrow */
+.section-header.dark-left .section-header-inner::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #e8b400;
+  margin-bottom: 20px;
+}
+
+.section-header.dark-left .section-header-eyebrow {
+  color: #e8b400;
+  gap: 0;
+}
+
+.section-header.dark-left .section-header-heading {
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.section-header.dark-left .section-header-subtitle {
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 100%;
+}
+
+.section-header.dark-left .section-header-subtitle p {
+  color: inherit;
+}
+
+/* CTA link */
+.section-header.dark-left .section-header-cta {
+  color: #e8b400;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+}
+
+.section-header.dark-left .section-header-cta::after {
+  content: none;
+}
+
+.section-header.dark-left .section-header-cta:hover {
+  color: #d4a200;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (width < 900px) {
+  .section-header-container:has(.section-header.dark-left) .section-header-wrapper {
+    padding: 48px 32px;
+  }
+}
+
+@media (width < 600px) {
+  .section-header-container .section-header-wrapper {
+    padding: 48px 20px 32px;
+  }
+
+  .section-header-heading {
+    font-size: 28px;
+  }
+
+  .section-header-subtitle {
+    font-size: 15px;
+  }
+
+  .section-header-container:has(.section-header.dark-left) .section-header-wrapper {
+    padding: 40px 20px;
+  }
+
+  .section-header.dark-left .section-header-heading {
+    font-size: 26px;
+  }
+}
+
+/* ── RTL (Arabic) overrides ──────────────────────────────────────── */
+[dir="rtl"] .section-header-container:has(.section-header.news-inline) .section-header-wrapper {
+  text-align: right;
+}
+
+[dir="rtl"] .section-header.news-inline .section-header-heading {
+  text-align: right;
+}

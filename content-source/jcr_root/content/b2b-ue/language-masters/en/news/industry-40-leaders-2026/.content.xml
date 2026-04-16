@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Lumina Noventis Named to 2026 Industry 4.0 Leaders Index"
+      jcr:description="For the third consecutive year, Lumina Noventis earns recognition as a top-100 Industry 4.0 enabler in the global precision manufacturing sector."
+      cq:lastModified="2026-01-14T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/company]"
+      category="COMPANY"
+      listOrder="3"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"/>
+      </section_breadcrumb>
+
+      <!-- Article Header -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="Lumina Noventis Named to 2026 Industry 4.0 Leaders Index"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;January 14, 2026 &amp;middot; Company &amp;middot; 4 min read&lt;/p&gt;"/>
+      </section>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Lumina Noventis has been named to the 2026 Industry 4.0 Leaders Index for the third consecutive year, recognising companies that have made measurable contributions to the digital transformation of precision manufacturing.&lt;/p&gt;&#xa;&lt;p&gt;The Index, published annually by the Advanced Manufacturing Research Centre (AMRC) in partnership with McKinsey &amp;amp; Company, evaluates over 1,200 technology suppliers across six dimensions: connectivity, data intelligence, automation, customer impact, sustainability integration, and workforce enablement.&lt;/p&gt;&#xa;&lt;h2&gt;Recognition Highlights&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;Top-50 ranking in the Connectivity and Data Intelligence categories&lt;/li&gt;&#xa;&lt;li&gt;Recognised for OPC-UA native integration across the SpectraLink and DataPilot product families&lt;/li&gt;&#xa;&lt;li&gt;Called out specifically for the IIoT-ready calibration workflow released in Q3 2025&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;p&gt;&lt;em&gt;“Lumina Noventis continues to close the gap between shop-floor metrology and enterprise data infrastructure. Their approach to real-time measurement traceability is setting the pace for the industry.”&lt;/em&gt; — AMRC Index Report, 2026&lt;/p&gt;&#xa;&lt;p&gt;The full Index report is available for download at the AMRC website. Lumina Noventis customers can access our Industry 4.0 integration guide through the customer portal.&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/en/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

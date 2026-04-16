@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Budgets d'incertitude dans la GD&amp;amp;T pour dispositifs médicaux : un guide pratique"
+      jcr:description="Un guide complet pour construire des budgets d'incertitude défendables pour la mesure GD&amp;amp;T dans la fabrication de dispositifs médicaux réglementés par la FDA."
+      cq:lastModified="2026-02-27T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/white-paper]"
+      category="WHITE PAPER"
+      listOrder="2"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="Actualités"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="Livre blanc"
+             variant="white-paper"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="Budgets d'incertitude dans la GD&amp;amp;T pour dispositifs médicaux : un guide pratique"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;27 février 2026 · Livre blanc · 8 min de lecture&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Ce livre blanc aborde l'un des défis les plus persistants de la fabrication de dispositifs médicaux réglementés par la FDA : la construction de budgets d'incertitude pour la cotation et la tolérance géométrique (GD&amp;amp;T) satisfaisant à la fois aux exigences d'audit de l'ISO 14253-1 et du FDA 21 CFR Part 11.&lt;/p&gt;&#xa;&lt;p&gt;Fort de plus d'une décennie d'expérience de déploiement auprès de fabricants de dispositifs de classe II et de classe III, notre équipe métrologique présente une méthodologie structurée, étape par étape, pour identifier, quantifier et documenter toutes les sources significatives d'incertitude de mesure — de la variabilité de l'opérateur et la conformité des outillages aux gradients de température ambiante.&lt;/p&gt;&#xa;&lt;h2&gt;Ce que vous apprendrez&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;Le cadre de budget d'incertitude à cinq catégories (sources de type A et de type B)&lt;/li&gt;&#xa;&lt;li&gt;Comment calculer l'incertitude élargie U95 pour les profils de surface et les appels de position vraie&lt;/li&gt;&#xa;&lt;li&gt;La conception d'études Gauge R&amp;amp;R pour les systèmes de mesure GD&amp;amp;T basés sur CMM&lt;/li&gt;&#xa;&lt;li&gt;Des modèles de documentation conformes à l'ISO/IEC 17025 et aux exigences d'audit FDA&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h2&gt;Télécharger le livre blanc&lt;/h2&gt;&#xa;&lt;p&gt;Remplissez le formulaire sur notre page de ressources pour recevoir le livre blanc complet de 28 pages, comprenant des exemples résolus et des modèles de budget d'incertitude éditables au format Excel.&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/fr/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

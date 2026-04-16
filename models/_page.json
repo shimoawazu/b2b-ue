@@ -1,0 +1,70 @@
+{
+  "id": "page",
+  "fields": [
+    {
+      "component": "tab",
+      "label": "Basic",
+      "name": "tab-basic"
+    },
+    {
+      "component": "text",
+      "valueType": "string",
+      "name": "jcr:title",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "component": "text",
+      "valueType": "string",
+      "name": "jcr:pagetitle",
+      "label": "Page Title"
+    },
+    {
+      "component": "text",
+      "valueType": "string",
+      "name": "jcr:description",
+      "label": "Description"
+    },
+    {
+      "component": "tab",
+      "label": "Navigation",
+      "name": "tab-nav"
+    },
+    {
+      "component": "number",
+      "valueType": "number",
+      "name": "navOrder",
+      "label": "Nav Order"
+    },
+    {
+      "component": "boolean",
+      "name": "hideInNav",
+      "label": "Hide in Nav"
+    },
+    {
+      "component": "number",
+      "valueType": "number",
+      "name": "listOrder",
+      "label": "List Order"
+    },
+    {
+      "component": "tab",
+      "label": "Article",
+      "name": "tab-article"
+    },
+    {
+      "component": "aem-tag",
+      "name": "cq:tags",
+      "label": "Category Tag",
+      "description": "Select a news category tag. Sets the badge shown on list cards.",
+      "rootPath": "/content/cq:tags/b2b-ue/news-category"
+    },
+    {
+      "component": "text",
+      "valueType": "string",
+      "name": "category",
+      "label": "Category (plain text)",
+      "description": "Fallback display label if no tag is selected (e.g. PRODUCT LAUNCH). Used by the published query index."
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Startseite"
+      jcr:description="Lumina Noventis — Präzisionsoptik. Fortschrittliche Bildgebung."
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Hero B2B Section -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <hero_b2b jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="Hero B2B"
+              model="hero-b2b"
+              image="/content/dam/b2b-ue/images/solutions-medical-preview.jpg"
+              preheader="PRÄZISIONSOPTIK · FORTSCHRITTLICHE BILDGEBUNG"
+              header="Messen, was wirklich zählt"
+              description="&lt;p>Von Luft- und Raumfahrtoptik bis hin zu medizinischen Bildgebungsplattformen — Lumina Noventis liefert die photonische Präzision, die Ihre anspruchsvollsten Anwendungen erfordern.&lt;/p>"
+              cta1Text="Produkte erkunden"
+              cta1Link="/de/products"
+              cta2Text="Lösungen ansehen"
+              cta2Link="/de/solutions"
+              stat1Value="40+"
+              stat1Label="Jahre Erfahrung"
+              stat2Value="120+"
+              stat2Label="Bediente Länder"
+              stat3Value="ISO 17025"
+              stat3Label="Zertifizierte Kalibrierung"/>
+      </section>
+
+      <!-- Solutions Grid Section -->
+      <section_solutions jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="highlight">
+        <section_header jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/block/v1/block"
+               name="Section Header"
+               model="section-header"
+               eyebrow="BRANCHENLÖSUNGEN"
+               heading="Entwickelt für Ihre Branche"
+               subtitle="&lt;p>Von der Halbleiterfertigung bis zur pharmazeutischen Compliance — unsere Messlösungen passen sich den Präzisionsanforderungen Ihres Sektors an.&lt;/p>"/>
+        <cards jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/block/v1/block"
+               name="Cards"
+               filter="cards">
+          <item1 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>Präzisionsfertigung&lt;/h3>&#xa;&lt;p>Dimensionsmetrologie für engtolerierte Bearbeitungs- und Umformteile&lt;/p>"
+                 cardstyle="solution-tile"
+                 ctastyle=""
+                 icon="hex-tolerance"/>
+          <item2 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>Medizinprodukteherstellung&lt;/h3>&#xa;&lt;p>FDA 21 CFR Teil 11-Konformität und GMP-Validierung&lt;/p>"
+                 cardstyle="solution-tile"
+                 ctastyle=""
+                 icon="clipboard"/>
+          <item3 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>Life Sciences &amp;amp; F&amp;amp;E&lt;/h3>&#xa;&lt;p>Laborgradmetrologie für forschungsqualitative Daten&lt;/p>"
+                 cardstyle="solution-tile"
+                 ctastyle=""
+                 icon="waveform"/>
+          <item4 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>Industriedruck&lt;/h3>&#xa;&lt;p>Spektralmessung für Farbkonsistenz und Registergenauigkeit&lt;/p>"
+                 cardstyle="solution-tile"
+                 ctastyle=""
+                 icon="monitor"/>
+          <item5 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>Etikett &amp;amp; Verpackung&lt;/h3>&#xa;&lt;p>Inline-QS für Hochgeschwindigkeits-Etiketten- und Flexverpackungslinien&lt;/p>"
+                 cardstyle="solution-tile"
+                 ctastyle=""
+                 icon="lock"/>
+          <item6 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>Additive Fertigung&lt;/h3>&#xa;&lt;p>Dimensionsprüfung für 3D-gedruckte und AM-Teile&lt;/p>"
+                 cardstyle="solution-tile"
+                 ctastyle=""
+                 icon="cube"/>
+        </cards>
+        <cta_link jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/block/v1/block"
+               name="CTA Link"
+               model="cta-link"
+               linkText="Alle Lösungen anzeigen"
+               linkUrl="/de/solutions"/>
+      </section_solutions>
+
+      <!-- Why Engineers Choose Lumina Noventis -->
+      <section_why_engineers jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="feature-split">
+        <section_header jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/block/v1/block"
+               name="Section Header"
+               model="section-header"
+               eyebrow="WARUM INGENIEURE LUMINA NOVENTIS WÄHLEN"
+               heading="Warum Ingenieure Lumina Noventis wählen"
+               subtitle="&lt;p>Vier Jahrzehnte messtechnischer Innovation — in jedes Instrument eingebaut, das wir liefern.&lt;/p>"
+               ctaText="Unsere Technologie kennenlernen"
+               ctaLink="/de/about"
+               style="dark-left"/>
+        <cards jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/block/v1/block"
+               name="Cards"
+               filter="cards">
+          <item1 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>OIML- und ISO-rückverfolgbar&lt;/h3>&#xa;&lt;p>Jedes Kalibrierzertifikat ist auf nationale Metrologieinstitute rückverfolgbar.&lt;/p>"
+                 cardstyle="feature-tile"
+                 ctastyle=""
+                 icon="clock"/>
+          <item2 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>Submikrometer-Genauigkeit&lt;/h3>&#xa;&lt;p>Messunsicherheit unter 0,1 µm über unsere gesamte Dimensionsmessgerätelinie.&lt;/p>"
+                 cardstyle="feature-tile"
+                 ctastyle=""
+                 icon="check-shield"/>
+          <item3 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>IIoT / Industrie 4.0&lt;/h3>&#xa;&lt;p>OPC-UA, Profinet und REST-API-Ausgang für nahtlose MES- und SCADA-Integration.&lt;/p>"
+                 cardstyle="feature-tile"
+                 ctastyle=""
+                 icon="bar-chart"/>
+          <item4 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="core/franklin/components/block/v1/block/item"
+                 name="Card"
+                 model="card"
+                 text="&lt;h3>Globales Servicenetzwerk&lt;/h3>&#xa;&lt;p>42 Servicezentren in 30 Ländern — 98,7% Verfügbarkeits-SLA für kritische Systeme.&lt;/p>"
+                 cardstyle="feature-tile"
+                 ctastyle=""
+                 icon="globe"/>
+        </cards>
+      </section_why_engineers>
+
+      <!-- News Section -->
+      <section_news jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <section_header jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/block/v1/block"
+               name="Section Header"
+               model="section-header"
+               eyebrow="AKTUELLE NEUIGKEITEN"
+               heading="Aus dem Labor und dem Feld"
+               ctaText="Alle Neuigkeiten ansehen"
+               ctaLink="/de/news"
+               style="news-inline"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/de/news"
+              sortBy="listOrder"
+              showDescription="true"
+              showImage="true"
+              showDate="true"
+              limit="3"
+              paginate="false"
+              pageSize="5"
+              urlState="false"
+              listStyle="news-featured"
+              readMoreText="Mehr lesen"/>
+      </section_news>
+
+      <!-- CTA / Contact Section -->
+      <section_cta jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <hero_cta jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="Hero B2B"
+              model="hero-b2b"
+              image="/content/dam/b2b-ue/images/solutions-medical-preview.jpg"
+              preheader="BEREIT ANZUFANGEN?"
+              header="Sprechen Sie mit einem Messtechnik-Anwendungsingenieur"
+              description="&lt;p>Schildern Sie uns Ihre Messherausforderung. Unsere Ingenieure empfehlen das richtige Instrument, das Kalibrierprotokoll und den Integrationsweg für Ihren Prozess.&lt;/p>"
+              cta1Text="Demo anfragen"
+              cta1Link="/de/contact"
+              cta2Text="Broschüre herunterladen"
+              cta2Link="/de/resources/brochure"
+              stat1Value="98,7%"
+              stat1Label="System-Verfügbarkeits-SLA"
+              stat2Value="4h"
+              stat2Label="Durchschnittliche Reaktionszeit"
+              stat3Value="42"
+              stat3Label="Globale Servicezentren"
+              variant="cta"/>
+      </section_cta>
+
+    </root>
+  </jcr:content>
+  <nav/>
+  <footer/>
+  <search/>
+  <products/>
+  <solutions/>
+  <about/>
+  <news/>
+</jcr:root>

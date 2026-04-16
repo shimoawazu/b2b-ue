@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Messunsicherheitsbudgets in der GD&amp;amp;T für Medizinprodukte: Ein praktischer Leitfaden"
+      jcr:description="Ein umfassender Leitfaden zum Aufbau vertretbarer Messunsicherheitsbudgets für GD&amp;amp;T-Messungen in der FDA-regulierten Medizinproduktherstellung."
+      cq:lastModified="2026-02-27T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/white-paper]"
+      category="WHITE PAPER"
+      listOrder="2"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="News"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="Whitepaper"
+             variant="white-paper"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="Messunsicherheitsbudgets in der GD&amp;amp;T für Medizinprodukte: Ein praktischer Leitfaden"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;27. Februar 2026 · Whitepaper · 8 Min. Lesezeit&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Dieses Whitepaper befasst sich mit einer der hartnäckigsten Herausforderungen in der FDA-regulierten Medizinproduktherstellung: dem Aufbau von Messunsicherheitsbudgets für Geometrische Bemaßung und Tolerierung (GD&amp;amp;T), die sowohl die Anforderungen von ISO 14253-1 als auch von FDA 21 CFR Part 11 erfüllen.&lt;/p&gt;&#xa;&lt;p&gt;Gestützt auf mehr als ein Jahrzehnt Einsatzerfahrung bei Klasse-II- und Klasse-III-Geräteherstellern präsentiert unser Messtechnik-Team eine strukturierte, schrittweise Methodik zur Identifizierung, Quantifizierung und Dokumentation aller wesentlichen Quellen der Messunsicherheit — von der Bedienschwankung und der Vorrichtungskonformität bis hin zu Umgebungstemperaturgradienten.&lt;/p&gt;&#xa;&lt;h2&gt;Was Sie lernen werden&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;Das Messunsicherheitsbudget-Framework mit fünf Kategorien (Typ-A- und Typ-B-Quellen)&lt;/li&gt;&#xa;&lt;li&gt;Berechnung der erweiterten Messunsicherheit U95 für Flächenprofile und Lageangaben&lt;/li&gt;&#xa;&lt;li&gt;Studiendesign für Gauge-R&amp;amp;R-Studien für CMM-basierte GD&amp;amp;T-Messsysteme&lt;/li&gt;&#xa;&lt;li&gt;Dokumentationsvorlagen, die mit ISO/IEC 17025 und den FDA-Prüfanforderungen abgestimmt sind&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h2&gt;Whitepaper herunterladen&lt;/h2&gt;&#xa;&lt;p&gt;Füllen Sie das Formular auf unserer Ressourcenseite aus, um das vollständige 28-seitige Whitepaper zu erhalten, einschließlich ausgearbeiteter Beispiele und editierbarer Messunsicherheitsbudget-Vorlagen im Excel-Format.&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/de/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

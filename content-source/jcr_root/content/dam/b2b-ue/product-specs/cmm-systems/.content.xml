@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="51459257-3aea-5f66-b708-a4cd7ea5c76e">
+    <jcr:content
+        cq:name="cmm-systems"
+        cq:parentPath="/content/dam/b2b-ue/product-specs"
+        jcr:description="\0"
+        jcr:lastModified="{Date}2026-04-10T12:00:00.000Z"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="CMM Systems"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/b2b-ue/settings/dam/cfm/models/product-spec"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}2">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                productName="CMM Systems"
+                productName_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                productName_x0040_LastModifiedBy="admin"
+                series="SpectraLink Series"
+                series_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                series_x0040_LastModifiedBy="admin"
+                category="Dimensional Metrology"
+                category_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                category_x0040_LastModifiedBy="admin"
+                heroImage="/content/dam/b2b-ue/images/2-people-pc-preview.jpg"
+                heroImage_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                heroImage_x0040_LastModifiedBy="admin"
+                shortDescription="Sub-micron coordinate measurement at production speed. Measurement uncertainty ≤ 0.05 µm without cleanroom constraints — certified for factory-floor deployment."
+                shortDescription_x0040_ContentType="text/plain"
+                shortDescription_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                shortDescription_x0040_LastModifiedBy="admin"
+                measurementUncertainty="≤ 0.05 µm (ISO 10360-2)"
+                measurementUncertainty_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                measurementUncertainty_x0040_LastModifiedBy="admin"
+                protectionRating="IP67"
+                protectionRating_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                protectionRating_x0040_LastModifiedBy="admin"
+                operatingTemperature="−10°C to +60°C"
+                operatingTemperature_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                operatingTemperature_x0040_LastModifiedBy="admin"
+                industrialProtocols="OPC-UA · EtherNet/IP · MQTT"
+                industrialProtocols_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                industrialProtocols_x0040_LastModifiedBy="admin"
+                calibrationStandard="OIML &amp; ISO Traceable"
+                calibrationStandard_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                calibrationStandard_x0040_LastModifiedBy="admin"
+                compliance="FDA 21 CFR Part 11 · EU Annex 11"
+                compliance_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                compliance_x0040_LastModifiedBy="admin"
+                reportTemplates="ISO/IEC 17025 compliant"
+                reportTemplates_x0040_LastModified="{Date}2026-04-10T12:00:00.000Z"
+                reportTemplates_x0040_LastModifiedBy="admin">
+                <card
+                    jcr:primaryType="nt:unstructured"
+                    assets="[&quot;/content/dam/b2b-ue/images/2-people-pc-preview.jpg&quot;]"
+                    texts="[CMM Systems,SpectraLink Series,Dimensional Metrology,Sub-micron coordinate measurement at production speed.,≤ 0.05 µm (ISO 10360-2)]"/>
+            </master>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="880ef5cd-2023-52b1-be66-22a7291f1ef1"
+                _x0040_string_x0040_model="/conf/b2b-ue/settings/dam/cfm/models/product-spec"
+                _x0040_string_x0040_path="/content/dam/b2b-ue/product-specs/cmm-systems"
+                _x0040_string_x0040_uuid="51459257-3aea-5f66-b708-a4cd7ea5c76e"
+                _x0040_stringArray_x0040_variations="[]"
+                string_x0040_productName="CMM Systems"
+                string_x0040_series="SpectraLink Series"
+                string_x0040_heroImage="/content/dam/b2b-ue/images/2-people-pc-preview.jpg"
+                string_x0040_category="Dimensional Metrology"
+                string_x0040_shortDescription="Sub-micron coordinate measurement at production speed. Measurement uncertainty ≤ 0.05 µm without cleanroom constraints — certified for factory-floor deployment."
+                string_x0040_measurementUncertainty="≤ 0.05 µm (ISO 10360-2)"
+                string_x0040_protectionRating="IP67"
+                string_x0040_operatingTemperature="−10°C to +60°C"
+                string_x0040_industrialProtocols="OPC-UA · EtherNet/IP · MQTT"
+                string_x0040_calibrationStandard="OIML &amp; ISO Traceable"
+                string_x0040_compliance="FDA 21 CFR Part 11 · EU Annex 11"
+                string_x0040_reportTemplates="ISO/IEC 17025 compliant"/>
+        </indexedData>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

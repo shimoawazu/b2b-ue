@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="About Us"
+      jcr:description="About Lumina Noventis — 40 years of precision measurement excellence"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="About Lumina Noventis"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;h2>Our Story&lt;/h2>&#xa;&lt;p>Founded in 1984 in Zurich, Switzerland, Lumina Noventis began as a small team of physicists and engineers passionate about pushing the boundaries of measurement science. Today, we are a global leader in precision test and measurement with over 4,500 employees across 28 countries.&lt;/p>&#xa;&lt;h2>Our Mission&lt;/h2>&#xa;&lt;p>To empower engineers and scientists with the world's most accurate, reliable, and intelligent measurement instruments — enabling breakthroughs in telecommunications, aerospace, automotive, and semiconductor technology.&lt;/p>&#xa;&lt;h2>Key Milestones&lt;/h2>&#xa;&lt;ul>&#xa;&lt;li>&lt;strong>1984&lt;/strong> — Founded in Zurich; first product: a 40 GHz scalar network analyzer&lt;/li>&#xa;&lt;li>&lt;strong>1992&lt;/strong> — Expanded to Japan and North America&lt;/li>&#xa;&lt;li>&lt;strong>2001&lt;/strong> — Introduced world's first 110 GHz vector network analyzer&lt;/li>&#xa;&lt;li>&lt;strong>2015&lt;/strong> — Launched cloud-connected DataPilot analytics platform&lt;/li>&#xa;&lt;li>&lt;strong>2022&lt;/strong> — Crossed 3,000 enterprise customers in 60 countries&lt;/li>&#xa;&lt;li>&lt;strong>2024&lt;/strong> — Launched AI-powered LuminaSoft 4.0&lt;/li>&#xa;&lt;/ul>"/>
+      </section>
+    </root>
+  </jcr:content>
+</jcr:root>

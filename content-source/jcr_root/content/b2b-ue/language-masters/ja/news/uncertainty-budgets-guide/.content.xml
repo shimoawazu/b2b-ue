@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="医療機器GD&amp;amp;Tにおける不確かさ予算：実践ガイド"
+      jcr:description="ISO 14253-1およびFDA 21 CFR Part 11の要件を満たすGD&amp;amp;T測定の不確かさ予算を構築するための包括的ガイド。"
+      cq:lastModified="2026-02-27T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/white-paper]"
+      category="WHITE PAPER"
+      listOrder="2"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="ニュース"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="ホワイトペーパー"
+             variant="white-paper"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="医療機器GD&amp;amp;Tにおける不確かさ予算：実践ガイド"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;2026年2月27日 · ホワイトペーパー · 読了時間：8分&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;本ホワイトペーパーは、FDA規制下の医療機器製造における最も根強い課題の一つに取り組みます。それは、ISO 14253-1およびFDA 21 CFR Part 11の監査要件を両立する、幾何公差（GD&amp;amp;T）のための不確かさ予算の構築です。&lt;/p&gt;&#xa;&lt;p&gt;クラスIIおよびクラスIIIデバイスメーカーにわたる10年以上の導入経験を踏まえ、当社の計測チームは、測定不確かさのすべての重要な発生源——オペレーターのばらつきや治具のコンプライアンスから環境温度勾配まで——を特定、定量化、および文書化するための体系的なステップバイステップの方法論を提示します。&lt;/p&gt;&#xa;&lt;h2&gt;学習内容&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;5カテゴリの不確かさ予算フレームワーク（タイプAおよびタイプB発生源）&lt;/li&gt;&#xa;&lt;li&gt;面輪郭度および真位置の呼び出しに対する拡張不確かさU95の算出方法&lt;/li&gt;&#xa;&lt;li&gt;CMMベースのGD&amp;amp;T測定システムに対するゲージR&amp;amp;R研究の設計&lt;/li&gt;&#xa;&lt;li&gt;ISO/IEC 17025およびFDA監査要件に対応した文書テンプレート&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h2&gt;ホワイトペーパーのダウンロード&lt;/h2&gt;&#xa;&lt;p&gt;リソースページのフォームにご記入いただくと、Excelフォーマットの計算例と編集可能な不確かさ予算テンプレートを含む全28ページのホワイトペーパーをお受け取りいただけます。&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/ja/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

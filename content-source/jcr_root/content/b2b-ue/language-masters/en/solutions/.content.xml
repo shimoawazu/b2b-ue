@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Solutions"
+      jcr:description="End-to-end measurement solutions for telecommunications, aerospace, and semiconductor industries"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="Industry Solutions"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p>Lumina Noventis delivers complete measurement ecosystems tailored to the unique demands of each industry.&lt;/p>"/>
+      </section>
+      <section_grid jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <cards jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/block/v1/block"
+               name="Cards"
+               filter="cards">
+          <item_telecom jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        name="Card"
+                        model="card"
+                        text="&lt;h3>Telecommunications&lt;/h3>&#xa;&lt;p>5G NR, LTE-A, Wi-Fi 7, and satellite communications test solutions for network equipment manufacturers and carriers.&lt;/p>"/>
+          <item_aero jcr:primaryType="nt:unstructured"
+                     sling:resourceType="core/franklin/components/block/v1/block/item"
+                     name="Card"
+                     model="card"
+                     text="&lt;h3>Aerospace&lt;/h3>&#xa;&lt;p>MIL-STD compliant test and measurement solutions for radar, EW, and satellite systems.&lt;/p>"/>
+          <item_semi jcr:primaryType="nt:unstructured"
+                     sling:resourceType="core/franklin/components/block/v1/block/item"
+                     name="Card"
+                     model="card"
+                     text="&lt;h3>Semiconductor&lt;/h3>&#xa;&lt;p>Wafer-level characterization, on-wafer probing, and IC test solutions for cutting-edge chip design.&lt;/p>"/>
+          <item_auto jcr:primaryType="nt:unstructured"
+                     sling:resourceType="core/franklin/components/block/v1/block/item"
+                     name="Card"
+                     model="card"
+                     text="&lt;h3>Automotive&lt;/h3>&#xa;&lt;p>V2X, ADAS radar, and automotive ethernet test solutions meeting ISO 26262 functional safety requirements.&lt;/p>"/>
+          <item_med jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block/item"
+                    name="Card"
+                    model="card"
+                    text="&lt;h3>Medical Devices&lt;/h3>&#xa;&lt;p>IEC 60601 compliant EMC and RF test solutions for wireless medical device certification.&lt;/p>"/>
+          <item_mfg jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block/item"
+                    name="Card"
+                    model="card"
+                    text="&lt;h3>Manufacturing&lt;/h3>&#xa;&lt;p>In-line and end-of-line test automation solutions integrated with Industry 4.0 production systems.&lt;/p>"/>
+        </cards>
+      </section_grid>
+    </root>
+  </jcr:content>
+</jcr:root>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/libs/core/franklin/templates/page"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="Lumina Noventis incluida en el Índice de Líderes de Industry 4.0 2026"
+      jcr:description="Por tercer año consecutivo, Lumina Noventis obtiene reconocimiento como uno de los 100 principales habilitadores de Industry 4.0 en el sector global de fabricación de precisión."
+      cq:lastModified="2026-01-14T00:00:00.000+00:00"
+      cq:tags="[b2b-ue:news-category/company]"
+      category="COMPANY"
+      listOrder="3"
+      sling:resourceType="core/franklin/components/page/v1/page">
+    <root jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+
+      <!-- Breadcrumb + Tag -->
+      <section_breadcrumb jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section">
+        <breadcrumb jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Breadcrumb"
+                    model="breadcrumb"
+                    parentLabel="Noticias"/>
+        <tag jcr:primaryType="nt:unstructured"
+             sling:resourceType="core/franklin/components/block/v1/block"
+             name="Tag"
+             model="tag"
+             category="Empresa"
+             variant="company"/>
+      </section_breadcrumb>
+
+      <!-- Article Header: H1 + meta row -->
+      <section jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-header">
+        <title jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/title/v1/title"
+               model="title"
+               title="Lumina Noventis incluida en el Índice de Líderes de Industry 4.0 2026"/>
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;14 de enero de 2026 · Empresa · 4 min de lectura&lt;/p&gt;"/>      </section>
+
+      <!-- Featured Image -->
+      <section_featured jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-hero">
+        <featured_image jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    name="Featured Image"
+                    model="featured-image"/>
+      </section_featured>
+
+      <!-- Article Body -->
+      <section_body1 jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="article-body">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Lumina Noventis ha sido incluida en el Índice de Líderes de Industry 4.0 2026 por tercer año consecutivo, reconociendo a las empresas que han realizado contribuciones medibles a la transformación digital de la fabricación de precisión.&lt;/p&gt;&#xa;&lt;p&gt;El Índice, publicado anualmente por el Advanced Manufacturing Research Centre (AMRC) en asociación con McKinsey &amp;amp; Company, evalúa a más de 1.200 proveedores de tecnología en seis dimensiones: conectividad, inteligencia de datos, automatización, impacto en el cliente, integración de sostenibilidad y capacitación de la fuerza laboral.&lt;/p&gt;&#xa;&lt;h2&gt;Aspectos destacados del reconocimiento&lt;/h2&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;Clasificación entre los 50 primeros en las categorías de Conectividad e Inteligencia de Datos&lt;/li&gt;&#xa;&lt;li&gt;Reconocimiento por la integración nativa de OPC-UA en las familias de productos SpectraLink y DataPilot&lt;/li&gt;&#xa;&lt;li&gt;Mención específica por el flujo de trabajo de calibración listo para IIoT lanzado en el tercer trimestre de 2025&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;p&gt;&lt;em&gt;«Lumina Noventis continúa cerrando la brecha entre la metrología en planta y la infraestructura de datos empresariales. Su enfoque de la trazabilidad de medición en tiempo real está marcando el ritmo para la industria.»&lt;/em&gt; — Informe del Índice AMRC, 2026&lt;/p&gt;&#xa;&lt;p&gt;El informe completo del Índice está disponible para descarga en el sitio web del AMRC. Los clientes de Lumina Noventis pueden acceder a nuestra guía de integración de Industry 4.0 a través del portal de clientes.&lt;/p&gt;"/>
+      </section_body1>
+
+      <!-- Related Articles -->
+      <section_related jcr:primaryType="nt:unstructured"
+               sling:resourceType="core/franklin/components/section/v1/section"
+               style="related-articles">
+        <text jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/text/v1/text"
+              text="&lt;p&gt;Related Articles&lt;/p&gt;"/>
+        <list jcr:primaryType="nt:unstructured"
+              sling:resourceType="core/franklin/components/block/v1/block"
+              name="List"
+              model="list"
+              rootPath="/es/news"
+              sortBy="listOrder"
+              showDate="true"
+              limit="3"
+              listStyle="related"/>
+      </section_related>
+    </root>
+  </jcr:content>
+</jcr:root>

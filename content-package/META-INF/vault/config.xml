@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vaultfs version="1.1">
+  <properties>
+    <entry key="name">b2b-ue-content</entry>
+    <entry key="description">B2B UE starter content package</entry>
+    <entry key="version">1.0.0</entry>
+    <entry key="group">b2b-ue</entry>
+    <entry key="createdBy">SatoshiInoue</entry>
+    <entry key="requiresRoot">false</entry>
+  </properties>
+  <handlers>
+    <handler class="org.apache.jackrabbit.vault.packaging.impl.ZipVaultPackage"/>
+  </handlers>
+  <ignore-versioned-nodes>false</ignore-versioned-nodes>
+</vaultfs>

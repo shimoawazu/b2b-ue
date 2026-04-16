@@ -1,0 +1,26 @@
+query GetProductSpec($path: String!) {
+  productSpecByPath(_path: $path) {
+    item {
+      _path
+      productName
+      series
+      category
+      shortDescription {
+        plaintext
+      }
+      heroImage {
+        ... on ImageRef {
+          _authorUrl
+          _publishUrl
+        }
+      }
+      measurementUncertainty
+      protectionRating
+      operatingTemperature
+      industrialProtocols
+      calibrationStandard
+      compliance
+      reportTemplates
+    }
+  }
+}

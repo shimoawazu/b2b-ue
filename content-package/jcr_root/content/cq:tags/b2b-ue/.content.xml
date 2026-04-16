@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Tag"
+    jcr:title="B2B UE"
+    sling:resourceType="cq/tagging/components/tag">
+  <news-category
+      jcr:primaryType="cq:Tag"
+      jcr:title="News Category"
+      sling:resourceType="cq/tagging/components/tag">
+    <product-launch
+        jcr:primaryType="cq:Tag"
+        jcr:title="Product Launch"
+        sling:resourceType="cq/tagging/components/tag"/>
+    <white-paper
+        jcr:primaryType="cq:Tag"
+        jcr:title="White Paper"
+        sling:resourceType="cq/tagging/components/tag"/>
+    <company
+        jcr:primaryType="cq:Tag"
+        jcr:title="Company"
+        sling:resourceType="cq/tagging/components/tag"/>
+    <event
+        jcr:primaryType="cq:Tag"
+        jcr:title="Event"
+        sling:resourceType="cq/tagging/components/tag"/>
+    <press-release
+        jcr:primaryType="cq:Tag"
+        jcr:title="Press Release"
+        sling:resourceType="cq/tagging/components/tag"/>
+    <industry-insight
+        jcr:primaryType="cq:Tag"
+        jcr:title="Industry Insight"
+        sling:resourceType="cq/tagging/components/tag"/>
+  </news-category>
+</jcr:root>
